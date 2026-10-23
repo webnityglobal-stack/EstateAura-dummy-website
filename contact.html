@@ -1,0 +1,1348 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us | EstateAura Real Estate</title>
+  <meta name="description" content="Contact EstateAura for property buying, selling, renting and real estate enquiries. Let's discuss your property goals.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #183f35;
+      --green-dark: #102d26;
+      --gold: #c5a16a;
+      --cream: #f6f4ed;
+      --text: #26352e;
+      --muted: #737b75;
+      --border: #e7e8e1;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: white;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 29px;
+      font-weight: 700;
+      letter-spacing: -.7px;
+      color: var(--green);
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .brand-caption {
+      display: block;
+      margin-top: -5px;
+      font-size: 9px;
+      letter-spacing: 2.8px;
+      font-weight: 700;
+      color: #777f78;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #455249;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold);
+    }
+
+    .nav-links .nav-cta {
+      background: var(--green);
+      color: white;
+      padding: 12px 19px;
+      border-radius: 4px;
+    }
+
+    .nav-links .nav-cta:hover {
+      background: var(--green-dark);
+      color: white;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: var(--green);
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* BUTTONS */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 13px 22px;
+      background: var(--gold);
+      border: 1px solid var(--gold);
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .25s;
+    }
+
+    .btn:hover {
+      background: #ad8950;
+      border-color: #ad8950;
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      background: var(--green);
+      border-color: var(--green);
+    }
+
+    .btn-dark:hover {
+      background: var(--green-dark);
+      border-color: var(--green-dark);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: rgba(255,255,255,.7);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      border-color: white;
+      color: var(--green);
+    }
+
+    /* HERO */
+
+    .contact-hero {
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(12,35,27,.91), rgba(12,35,27,.56)),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85")
+        center 55% / cover no-repeat;
+    }
+
+    .hero-content {
+      padding: 75px 0;
+      max-width: 750px;
+    }
+
+    .eyebrow {
+      color: #dfc18d;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .contact-hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(43px, 6vw, 69px);
+      line-height: 1.12;
+      font-weight: 500;
+      margin-bottom: 22px;
+    }
+
+    .contact-hero h1 span {
+      color: #dfc18d;
+    }
+
+    .hero-description {
+      max-width: 580px;
+      color: #e1e8e1;
+      font-size: 15px;
+      line-height: 1.9;
+      margin-bottom: 27px;
+    }
+
+    /* SECTION HEADINGS */
+
+    .section-label {
+      color: #a4834e;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      color: var(--green);
+      font-size: clamp(34px, 4vw, 48px);
+      line-height: 1.2;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .section-title span {
+      color: #ad8950;
+    }
+
+    .section-description {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.95;
+    }
+
+    /* CONTACT SECTION */
+
+    .contact-section {
+      padding: 90px 0;
+      background: var(--cream);
+    }
+
+    .contact-heading {
+      max-width: 680px;
+      text-align: center;
+      margin: 0 auto 48px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .contact-info {
+      position: relative;
+      overflow: hidden;
+      background: var(--green);
+      color: white;
+      padding: 42px 35px;
+    }
+
+    .contact-info::after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      right: -120px;
+      bottom: -100px;
+      border: 1px solid rgba(223,193,141,.25);
+      border-radius: 50%;
+      box-shadow: 0 0 0 30px rgba(223,193,141,.04),
+                  0 0 0 60px rgba(223,193,141,.035);
+      pointer-events: none;
+    }
+
+    .contact-info h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 31px;
+      font-weight: 500;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .contact-info > p {
+      color: #d0d9d1;
+      font-size: 13px;
+      line-height: 1.9;
+      margin-bottom: 32px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255,255,255,.16);
+      position: relative;
+      z-index: 1;
+    }
+
+    .info-icon {
+      width: 43px;
+      height: 43px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: rgba(223,193,141,.12);
+      border: 1px solid rgba(223,193,141,.25);
+      color: #dfc18d;
+      font-size: 19px;
+    }
+
+    .info-item h3 {
+      color: #dfc18d;
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .info-item p,
+    .info-item a {
+      color: #f0f3ee;
+      font-size: 13px;
+      line-height: 1.8;
+      overflow-wrap: anywhere;
+    }
+
+    .info-item a:hover {
+      color: #dfc18d;
+    }
+
+    .contact-socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 25px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-socials a {
+      color: #dfc18d;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* FORM */
+
+    .contact-form-wrap {
+      padding: 42px;
+      background: white;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 35px rgba(25,52,39,.035);
+    }
+
+    .contact-form-wrap h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--green);
+      font-size: 31px;
+      line-height: 1.3;
+      font-weight: 500;
+      margin-bottom: 9px;
+    }
+
+    .form-intro {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 28px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .form-group {
+      min-width: 0;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      display: block;
+      color: #36463c;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 14px;
+      border: 1px solid #dfe3dc;
+      background: #fff;
+      border-radius: 0;
+      outline: none;
+      color: var(--text);
+      font-size: 13px;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .form-group textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(197,161,106,.13);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #9aa19a;
+    }
+
+    .form-submit {
+      width: 100%;
+      margin-top: 23px;
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.8;
+      margin-top: 14px;
+    }
+
+    /* TRUST STRIP */
+
+    .trust-section {
+      padding: 65px 0;
+      background: white;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .trust-item {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .trust-icon {
+      font-size: 29px;
+      color: var(--gold);
+      margin-bottom: 13px;
+    }
+
+    .trust-item h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      color: var(--green);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .trust-item p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* MAP */
+
+    .location-section {
+      padding: 75px 0 90px;
+      background: var(--cream);
+    }
+
+    .location-heading {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 35px;
+    }
+
+    .map-placeholder {
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      background:
+        linear-gradient(rgba(16,45,38,.78), rgba(16,45,38,.78)),
+        url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80")
+        center / cover no-repeat;
+      color: white;
+    }
+
+    .map-placeholder h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 31px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .map-placeholder p {
+      color: #e1e8e1;
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    /* CTA */
+
+    .cta-section {
+      padding: 75px 0;
+      background: var(--green);
+      color: white;
+    }
+
+    .cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .cta-inner h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(29px, 4vw, 43px);
+      line-height: 1.25;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .cta-inner p {
+      color: #d0d9d1;
+      font-size: 13px;
+    }
+
+    .cta-inner .btn {
+      flex-shrink: 0;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      background: var(--green-dark);
+      color: white;
+    }
+
+    .footer-container {
+      width: min(1160px, 90%);
+      margin: auto;
+      padding: 58px 0 42px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.1fr;
+      gap: 32px;
+    }
+
+    .footer-brand .logo {
+      display: inline-block;
+      color: white;
+      margin-bottom: 14px;
+    }
+
+    .footer-brand > p {
+      color: #c5d0c7;
+      font-size: 13px;
+      line-height: 1.9;
+      margin-bottom: 20px;
+      max-width: 280px;
+    }
+
+    .footer-socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-socials a {
+      color: #dfc18d;
+      font-size: 12px;
+    }
+
+    .footer-column h3 {
+      color: #dfc18d;
+      font-size: 12px;
+      letter-spacing: 1.4px;
+      margin-bottom: 19px;
+    }
+
+    .footer-column > a {
+      display: block;
+      width: fit-content;
+      color: #c5d0c7;
+      font-size: 13px;
+      margin-bottom: 11px;
+    }
+
+    .footer-column > a:hover,
+    .footer-socials a:hover {
+      color: white;
+    }
+
+    .footer-column > p {
+      color: #c5d0c7;
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .footer-bottom {
+      width: min(1160px, 90%);
+      margin: auto;
+      padding: 21px 0;
+      border-top: 1px solid rgba(255,255,255,.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-bottom p,
+    .footer-legal a,
+    .back-top {
+      color: #c5d0c7;
+      font-size: 12px;
+    }
+
+    .footer-legal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-legal a:hover,
+    .back-top:hover {
+      color: #dfc18d;
+    }
+
+    /* WHATSAPP FLOATING BUTTON */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 23px;
+      bottom: 23px;
+      z-index: 900;
+      width: 57px;
+      height: 57px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #20bd70;
+      color: white;
+      font-size: 25px;
+      font-weight: 700;
+      box-shadow: 0 7px 25px rgba(0,0,0,.18);
+      transition: transform .2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-4px);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1000px) {
+      .nav-links {
+        gap: 16px;
+      }
+
+      .contact-grid {
+        grid-template-columns: .9fr 1.1fr;
+      }
+
+      .contact-info,
+      .contact-form-wrap {
+        padding: 30px 25px;
+      }
+
+      .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav-inner {
+        min-height: 72px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        padding: 24px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        background: white;
+        border-top: 1px solid var(--border);
+        box-shadow: 0 12px 25px rgba(0,0,0,.08);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links .nav-cta {
+        width: fit-content;
+      }
+
+      .contact-hero {
+        min-height: 390px;
+      }
+
+      .hero-content {
+        padding: 65px 0;
+      }
+
+      .contact-section {
+        padding: 65px 0;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info,
+      .contact-form-wrap {
+        padding: 32px 25px;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .trust-item {
+        padding: 15px;
+      }
+
+      .cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .contact-hero h1 {
+        font-size: 42px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .whatsapp-float {
+        right: 15px;
+        bottom: 15px;
+        width: 52px;
+        height: 52px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+
+      <a href="index.html" class="brand" aria-label="EstateAura Home">
+        <span class="logo">EstateAura<span>.</span></span>
+        <span class="brand-caption">REAL ESTATE, REIMAGINED</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navMenu"
+      >☰</button>
+
+      <nav class="nav-links" id="navMenu" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="properties.html">Properties</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" >Contect</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="contact-hero">
+      <div class="container hero-content">
+
+        <p class="eyebrow">WE'RE HERE TO HELP</p>
+
+        <h1>
+          Let's talk about<br>
+          <span>your next move.</span>
+        </h1>
+
+        <p class="hero-description">
+          Whether you are searching for a new home, planning to sell
+          or exploring property opportunities, we'd love to hear
+          what you have in mind.
+        </p>
+
+        <a href="#contact-form" class="btn">
+          Send an Enquiry ↗
+        </a>
+
+      </div>
+    </section>
+
+    <!-- CONTACT FORM AND DETAILS -->
+    <section class="contact-section" id="contact-form">
+      <div class="container">
+
+        <div class="contact-heading">
+          <p class="section-label">GET IN TOUCH</p>
+
+          <h2 class="section-title">
+            Start a conversation<br>
+            <span>with EstateAura.</span>
+          </h2>
+
+          <p class="section-description">
+            Tell us a little about your property requirements.
+            Fill out the form and continue your enquiry through
+            WhatsApp.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- CONTACT DETAILS -->
+          <aside class="contact-info">
+            <h2>We'd love to hear from you.</h2>
+
+            <p>
+              Have a question about a listing or need help deciding
+              where to start? Reach out using the details below.
+            </p>
+
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">⌖</div>
+              <div>
+                <h3>OUR LOCATION</h3>
+                <p>Update this section with your office address.</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">✆</div>
+              <div>
+                <h3>PHONE / WHATSAPP</h3>
+                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
+                  +91 98765 43210
+                </a>
+                <p>Replace with your business number.</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">✉</div>
+              <div>
+                <h3>EMAIL US</h3>
+                <a href="mailto:hello@estateaura.com">
+                  hello@estateaura.com
+                </a>
+                <p>Replace with your business email.</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">◷</div>
+              <div>
+                <h3>WORKING HOURS</h3>
+                <p>Monday – Saturday</p>
+                <p>10:00 AM – 6:00 PM</p>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            </div>
+          </aside>
+
+          <!-- ENQUIRY FORM -->
+          <div class="contact-form-wrap">
+
+            <h2>Send us an enquiry</h2>
+
+            <p class="form-intro">
+              Complete the details below to prepare your enquiry.
+            </p>
+
+            <form id="enquiryForm">
+
+              <div class="form-grid">
+
+                <div class="form-group">
+                  <label for="fullName">Full Name *</label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    required
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    autocomplete="tel"
+                    inputmode="tel"
+                    pattern="[0-9+() -]{8,20}"
+                    required
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="service">I'm Interested In *</label>
+                  <select id="service" name="service" required>
+                    <option value="">Choose a service</option>
+                    <option value="Buying a Property">Buying a Property</option>
+                    <option value="Selling a Property">Selling a Property</option>
+                    <option value="Renting a Property">Renting a Property</option>
+                    <option value="Commercial Property">Commercial Property</option>
+                    <option value="Property Investment">Property Investment</option>
+                    <option value="General Consultation">General Consultation</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="budget">Preferred Budget</label>
+                  <select id="budget" name="budget">
+                    <option value="">Select your budget</option>
+                    <option value="Under ₹25 lakh">Under ₹25 lakh</option>
+                    <option value="₹25–50 lakh">₹25–50 lakh</option>
+                    <option value="₹50 lakh–₹1 crore">₹50 lakh–₹1 crore</option>
+                    <option value="₹1–2 crore">₹1–2 crore</option>
+                    <option value="Above ₹2 crore">Above ₹2 crore</option>
+                    <option value="Not decided">Not decided</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="location">Preferred Location</label>
+                  <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    placeholder="City or neighbourhood"
+                  >
+                </div>
+
+                <div class="form-group full">
+                  <label for="message">Tell Us More *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Describe the property or assistance you need..."
+                    required
+                  ></textarea>
+                </div>
+
+              </div>
+
+              <button type="submit" class="btn btn-dark form-submit">
+                Continue on WhatsApp ↗
+              </button>
+
+              <p class="form-note">
+                This form prepares a message in WhatsApp. It does not
+                store or email your details. Please review the message
+                before sending it.
+              </p>
+
+              <p
+                id="formStatus"
+                role="status"
+                aria-live="polite"
+                style="margin-top:12px;font-size:13px;color:#183f35;"
+              ></p>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CONTACT US -->
+    <section class="trust-section">
+      <div class="container">
+
+        <div class="contact-heading">
+          <p class="section-label">THE ESTATEAURA DIFFERENCE</p>
+          <h2 class="section-title">
+            A better experience<br>
+            <span>starts with a conversation.</span>
+          </h2>
+        </div>
+
+        <div class="trust-grid">
+
+          <article class="trust-item">
+            <div class="trust-icon" aria-hidden="true">◇</div>
+            <h3>Personalised Guidance</h3>
+            <p>
+              Share your priorities and discuss the property
+              options that best fit your requirements.
+            </p>
+          </article>
+
+          <article class="trust-item">
+            <div class="trust-icon" aria-hidden="true">⌂</div>
+            <h3>Explore Properties</h3>
+            <p>
+              Browse available listings and tell us which
+              locations or property types interest you.
+            </p>
+          </article>
+
+          <article class="trust-item">
+            <div class="trust-icon" aria-hidden="true">✓</div>
+            <h3>Clear Communication</h3>
+            <p>
+              Ask questions, discuss your requirements and
+              understand the next steps before proceeding.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="location-section">
+      <div class="container">
+
+        <div class="location-heading">
+          <p class="section-label">FIND US</p>
+          <h2 class="section-title">
+            Let's connect.
+          </h2>
+          <p class="section-description">
+            Ready to discuss your property goals? Get in touch
+            with EstateAura to start your enquiry.
+          </p>
+        </div>
+
+        <div class="map-placeholder">
+          <div>
+            <h3>EstateAura Real Estate</h3>
+            <p>Contact us to discuss your property requirements.</p>
+            <a href="contact.html#contact-form" class="btn">
+              Get in Touch ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container cta-inner">
+
+        <div>
+          <h2>Your next property chapter starts here.</h2>
+          <p>
+            Tell us what you are looking for and let's start a conversation.
+          </p>
+        </div>
+
+        <a href="#contact-form" class="btn">
+          Send Your Enquiry ↗
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Estate<span>Aura.</span></a>
+
+        <p>
+          Real estate, reimagined. Explore property possibilities
+          that fit your lifestyle, goals and vision for the future.
+        </p>
+
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>QUICK LINKS</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="properties.html">Properties</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>EXPLORE</h3>
+        <a href="properties.html">Residential Properties</a>
+        <a href="properties.html">Commercial Properties</a>
+        <a href="services.html">Property Buying</a>
+        <a href="services.html">Rental Assistance</a>
+        <a href="services.html">Investment Guidance</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>CONTACT</h3>
+        <p>Have a question about a property?</p>
+        <a href="#contact-form">Send an Enquiry ↗</a>
+        <a href="mailto:hello@estateaura.com">Email Us ↗</a>
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        © <span id="year">2026</span> EstateAura. All rights reserved.
+      </p>
+
+      <div class="footer-legal">
+        <a href="#contact-form">Privacy Policy</a>
+        <a href="#contact-form">Terms &amp; Conditions</a>
+      </div>
+
+      <a href="#" class="back-top" id="backTop">Back to Top ↑</a>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/919876543210"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact EstateAura on WhatsApp"
+    title="Chat on WhatsApp"
+  >✆</a>
+
+  <script>
+    // Copyright year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navMenu.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navMenu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Prepare enquiry in WhatsApp
+    document.getElementById("enquiryForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const form = event.currentTarget;
+
+      if (!form.reportValidity()) {
+        return;
+      }
+
+      const fullName = document.getElementById("fullName").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const service = document.getElementById("service").value;
+      const budget = document.getElementById("budget").value || "Not specified";
+      const location = document.getElementById("location").value.trim() || "Not specified";
+      const message = document.getElementById("message").value.trim();
+
+      const whatsappNumber = "919876543210"; // Replace with your real WhatsApp number
+
+      const whatsappMessage =
+        "Hello EstateAura,%0A%0A" +
+        "*New Property Enquiry*%0A" +
+        "Name: " + encodeURIComponent(fullName) + "%0A" +
+        "Phone: " + encodeURIComponent(phone) + "%0A" +
+        "Email: " + encodeURIComponent(email || "Not provided") + "%0A" +
+        "Service: " + encodeURIComponent(service) + "%0A" +
+        "Budget: " + encodeURIComponent(budget) + "%0A" +
+        "Preferred Location: " + encodeURIComponent(location) + "%0A" +
+        "Message: " + encodeURIComponent(message);
+
+      const status = document.getElementById("formStatus");
+      status.textContent = "Opening WhatsApp. Please review your message and press Send.";
+
+      const whatsappUrl =
+        "https://wa.me/" + whatsappNumber + "?text=" + whatsappMessage;
+
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    });
+
+    // Back to top
+    document.getElementById("backTop").addEventListener("click", function (event) {
+      event.preventDefault();
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+</body>
+</html>

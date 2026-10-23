@@ -1,0 +1,1411 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Our Services | EstateAura Real Estate</title>
+  <meta name="description" content="Explore EstateAura real estate services including buying, selling, renting, property management and investment consultation.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #183f35;
+      --green-dark: #102d26;
+      --gold: #c5a16a;
+      --cream: #f6f4ed;
+      --text: #26352e;
+      --muted: #737b75;
+      --border: #e7e8e1;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 29px;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: -.7px;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .brand-caption {
+      display: block;
+      margin-top: -3px;
+      font-size: 9px;
+      letter-spacing: 3px;
+      font-weight: 700;
+      color: #777f78;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 29px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #455249;
+      transition: color .25s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold);
+    }
+
+    .nav-links .nav-cta {
+      padding: 13px 19px;
+      background: var(--green);
+      color: white;
+      border-radius: 4px;
+    }
+
+    .nav-links .nav-cta:hover {
+      background: var(--green-dark);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 27px;
+      color: var(--green);
+      cursor: pointer;
+    }
+
+    /* BUTTONS */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 23px;
+      background: var(--gold);
+      color: white;
+      border: 1px solid var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .btn:hover {
+      background: #ad8950;
+      border-color: #ad8950;
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: transparent;
+      color: white;
+      border-color: rgba(255,255,255,.65);
+    }
+
+    .btn-light:hover {
+      background: white;
+      color: var(--green);
+      border-color: white;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    .btn-outline:hover {
+      background: var(--green);
+      color: white;
+      border-color: var(--green);
+    }
+
+    /* HERO */
+
+    .services-hero {
+      position: relative;
+      min-height: 510px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(15,37,29,.91), rgba(15,37,29,.64) 52%, rgba(15,37,29,.18)),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85")
+        center 52% / cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 750px;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      color: #dfc18d;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .services-hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(43px, 6vw, 72px);
+      line-height: 1.12;
+      font-weight: 500;
+      margin-bottom: 23px;
+    }
+
+    .services-hero h1 span {
+      color: #dfc18d;
+    }
+
+    .hero-description {
+      max-width: 590px;
+      color: #e6e9e4;
+      font-size: 15px;
+      line-height: 1.9;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* INTRO */
+
+    .intro-section {
+      padding: 88px 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .intro-image {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+    }
+
+    .section-label {
+      color: #a4834e;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      color: var(--green);
+      font-size: clamp(34px, 4vw, 49px);
+      line-height: 1.2;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .section-title span {
+      color: #ad8950;
+    }
+
+    .section-copy {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.95;
+      margin-bottom: 17px;
+    }
+
+    .intro-button {
+      margin-top: 12px;
+    }
+
+    /* SERVICE CARDS */
+
+    .services-section {
+      padding: 95px 0;
+      background: var(--cream);
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .section-heading .section-title {
+      margin-bottom: 16px;
+    }
+
+    .section-heading > p:last-child {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid #e8e6de;
+      transition: transform .25s, box-shadow .25s;
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 45px rgba(25,52,39,.09);
+    }
+
+    .service-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: #e7eae4;
+    }
+
+    .service-content {
+      padding: 28px 25px 30px;
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      margin-top: -52px;
+      margin-bottom: 20px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      background: var(--green);
+      color: #dfc18d;
+      border: 4px solid white;
+      font-size: 20px;
+    }
+
+    .service-card h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--green);
+      font-size: 25px;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .service-link:hover {
+      color: #a4834e;
+    }
+
+    /* WHY CHOOSE US */
+
+    .why-section {
+      padding: 100px 0;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .why-image {
+      height: 510px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .why-list {
+      margin-top: 32px;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 18px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .why-item:last-child {
+      border-bottom: 0;
+    }
+
+    .check-icon {
+      flex: 0 0 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      background: var(--cream);
+      color: #a4834e;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .why-item h3 {
+      color: var(--green);
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .why-item p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    /* PROCESS */
+
+    .process-section {
+      padding: 90px 0;
+      background: var(--green);
+      color: white;
+    }
+
+    .process-section .section-title {
+      color: white;
+    }
+
+    .process-section .section-heading > p:last-child {
+      color: #cbd5cc;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    .process-card {
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,.19);
+      background: rgba(255,255,255,.035);
+    }
+
+    .process-number {
+      font-family: "Playfair Display", serif;
+      color: #dfc18d;
+      font-size: 39px;
+      margin-bottom: 18px;
+    }
+
+    .process-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 13px;
+    }
+
+    .process-card p {
+      color: #cbd5cc;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    /* CTA */
+
+    .cta-section {
+      padding: 82px 0;
+      background:
+        linear-gradient(rgba(246,244,237,.94), rgba(246,244,237,.94)),
+        url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=80")
+        center / cover no-repeat;
+    }
+
+    .cta-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .cta-inner h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.25;
+      font-weight: 500;
+      color: var(--green);
+      margin-bottom: 13px;
+    }
+
+    .cta-inner p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .cta-inner .btn {
+      flex-shrink: 0;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      background: var(--green-dark);
+      color: white;
+    }
+
+    .footer-container {
+      width: min(1160px, 90%);
+      margin: auto;
+      padding: 62px 0 45px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.15fr;
+      gap: 35px;
+    }
+
+    .footer-brand .logo {
+      display: inline-block;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand > p {
+      max-width: 290px;
+      color: #c5d0c7;
+      font-size: 13px;
+      line-height: 1.9;
+      margin-bottom: 22px;
+    }
+
+    .footer-socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .footer-socials a {
+      font-size: 12px;
+      color: #dfc18d;
+    }
+
+    .footer-column h3 {
+      color: #dfc18d;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+    }
+
+    .footer-column > a {
+      display: block;
+      width: fit-content;
+      color: #c5d0c7;
+      font-size: 13px;
+      margin-bottom: 12px;
+      transition: color .2s;
+    }
+
+    .footer-column > a:hover,
+    .footer-socials a:hover {
+      color: white;
+    }
+
+    .footer-column > p {
+      color: #c5d0c7;
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .footer-bottom {
+      width: min(1160px, 90%);
+      margin: auto;
+      padding: 22px 0;
+      border-top: 1px solid rgba(255,255,255,.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-bottom p,
+    .footer-legal a,
+    .back-top {
+      color: #c5d0c7;
+      font-size: 12px;
+    }
+
+    .footer-legal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-legal a:hover,
+    .back-top:hover {
+      color: #dfc18d;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1000px) {
+      .nav-links {
+        gap: 16px;
+      }
+
+      .intro-grid,
+      .why-grid {
+        gap: 40px;
+      }
+
+      .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav-inner {
+        min-height: 72px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        padding: 24px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        background: white;
+        border-top: 1px solid var(--border);
+        box-shadow: 0 12px 25px rgba(0,0,0,.08);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links .nav-cta {
+        width: fit-content;
+      }
+
+      .services-hero {
+        min-height: 450px;
+      }
+
+      .hero-content {
+        padding: 70px 0;
+      }
+
+      .intro-section,
+      .services-section,
+      .why-section {
+        padding: 70px 0;
+      }
+
+      .intro-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .intro-image {
+        height: 350px;
+      }
+
+      .why-image {
+        height: 350px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container,
+      .footer-container,
+      .footer-bottom {
+        width: 90%;
+      }
+
+      .services-hero h1 {
+        font-size: 43px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: fit-content;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-image {
+        height: 230px;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-legal {
+        gap: 12px;
+      }
+    }
+    /* ===== ESTATEAURA HEADER FIX ===== */
+
+.site-header,
+header {
+  min-height: 0;
+}
+
+.site-header .container,
+header .container,
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* Logo size */
+.site-header .logo img,
+header .logo img,
+.navbar .logo img,
+header img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  max-height: 115px;
+  object-fit: contain;
+}
+
+/* Navigation */
+.site-header nav,
+header nav,
+.navbar nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 32px;
+}
+
+.site-header nav a,
+header nav a,
+.navbar nav a {
+  white-space: nowrap;
+  font-size: 16px;
+}
+
+/* Laptop */
+@media (min-width: 769px) {
+  .site-header,
+  header {
+    padding: 0;
+  }
+
+  .site-header .container,
+  header .container,
+  .navbar {
+    min-height: 125px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .site-header .container,
+  header .container,
+  .navbar {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 18px;
+  }
+
+  .site-header .logo img,
+  header .logo img,
+  .navbar .logo img,
+  header img {
+    max-width: 220px;
+    max-height: 75px;
+  }
+
+  .site-header nav,
+  header nav,
+  .navbar nav {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-header nav a,
+  header nav a,
+  .navbar nav a {
+    font-size: 14px;
+  }
+}
+/* EstateAura Header Logo Size */
+header .logo img,
+.navbar .logo img,
+.site-header .logo img,
+header a img {
+  width: 200px !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain;
+}
+
+/* Header alignment */
+header,
+.site-header,
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  header .logo img,
+  .navbar .logo img,
+  .site-header .logo img,
+  header a img {
+    width: 220px !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+
+     <a href="#home" class="brand" aria-label="EstateAura home">
+  <img src="logo.png" alt="EstateAura" class="brand-logo">
+</a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navMenu"
+      >☰</button>
+
+      <nav class="nav-links" id="navMenu" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="properties.html">Properties</a>
+        <a href="services.html" class="active" aria-current="page">Services</a>
+        <a href="contact.html" >Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="services-hero">
+      <div class="container hero-content">
+
+        <p class="eyebrow">THE ESTATEAURA EXPERIENCE</p>
+
+        <h1>
+          Real estate solutions.<br>
+          <span>Designed around you.</span>
+        </h1>
+
+        <p class="hero-description">
+          From finding your dream home to exploring your next
+          investment, discover property services built around
+          your goals, your lifestyle and your future.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#our-services" class="btn">Explore Our Services ↗</a>
+          <a href="contact.html" class="btn btn-light">Talk to Our Team ↗</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro-section">
+      <div class="container intro-grid">
+
+        <div>
+          <img
+            class="intro-image"
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+            alt="Elegant contemporary residential property"
+            loading="eager"
+          >
+        </div>
+
+        <div>
+          <p class="section-label">WHAT WE DO</p>
+
+          <h2 class="section-title">
+            Your property journey,<br>
+            <span>made simpler.</span>
+          </h2>
+
+          <p class="section-copy">
+            Real estate decisions involve more than selecting a
+            property. They require understanding your priorities,
+            comparing available options and considering the future.
+          </p>
+
+          <p class="section-copy">
+            EstateAura brings together property discovery and
+            personalised guidance to help you approach your next
+            move with clarity. Whether you are buying, selling,
+            renting or exploring investment opportunities, we
+            focus on what matters to you.
+          </p>
+
+          <a href="contact.html" class="btn btn-outline intro-button">
+            Discuss Your Requirements ↗
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="our-services">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">OUR SERVICES</p>
+
+          <h2 class="section-title">
+            Everything you need<br>
+            <span>under one roof.</span>
+          </h2>
+
+          <p>
+            Explore our range of real estate services and discover
+            how we can help you take your next step.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <!-- SERVICE 1 -->
+          <article class="service-card">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80"
+              alt="Modern home available for purchase"
+              loading="lazy"
+            >
+
+            <div class="service-content">
+              <div class="service-icon" aria-hidden="true">⌂</div>
+              <h3>Buy a Property</h3>
+              <p>
+                Explore residential and commercial properties
+                based on your preferred location, budget and
+                lifestyle requirements.
+              </p>
+              <a href="properties.html" class="service-link">
+                Explore Properties ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- SERVICE 2 -->
+          <article class="service-card">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80"
+              alt="Beautiful property for sale"
+              loading="lazy"
+            >
+
+            <div class="service-content">
+              <div class="service-icon" aria-hidden="true">↗</div>
+              <h3>Sell a Property</h3>
+              <p>
+                Present your property to interested buyers and
+                explore a selling approach that aligns with
+                your goals and timeline.
+              </p>
+              <a href="contact.html" class="service-link">
+                Discuss Selling ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- SERVICE 3 -->
+          <article class="service-card">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80"
+              alt="Comfortable modern living room"
+              loading="lazy"
+            >
+
+            <div class="service-content">
+              <div class="service-icon" aria-hidden="true">⌑</div>
+              <h3>Rental Assistance</h3>
+              <p>
+                Find rental options that suit your budget,
+                preferred neighbourhood and day-to-day needs.
+              </p>
+              <a href="properties.html" class="service-link">
+                Find a Rental ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- SERVICE 4 -->
+          <article class="service-card">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80"
+              alt="Premium residential interior"
+              loading="lazy"
+            >
+
+            <div class="service-content">
+              <div class="service-icon" aria-hidden="true">◇</div>
+              <h3>Property Consultation</h3>
+              <p>
+                Get help organising your requirements and
+                evaluating property options before deciding
+                which direction to take.
+              </p>
+              <a href="contact.html" class="service-link">
+                Book a Discussion ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- SERVICE 5 -->
+          <article class="service-card">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80"
+              alt="Modern commercial office building"
+              loading="lazy"
+            >
+
+            <div class="service-content">
+              <div class="service-icon" aria-hidden="true">▦</div>
+              <h3>Commercial Real Estate</h3>
+              <p>
+                Explore office spaces and commercial property
+                options for your business requirements and
+                long-term plans.
+              </p>
+              <a href="properties.html" class="service-link">
+                View Opportunities ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- SERVICE 6 -->
+          <article class="service-card">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+              alt="Contemporary property with landscaped surroundings"
+              loading="lazy"
+            >
+
+            <div class="service-content">
+              <div class="service-icon" aria-hidden="true">⌖</div>
+              <h3>Investment Guidance</h3>
+              <p>
+                Explore property opportunities by comparing
+                location, budget, intended use and your
+                personal investment objectives.
+              </p>
+              <a href="contact.html" class="service-link">
+                Discuss Investment ↗
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-section">
+      <div class="container why-grid">
+
+        <div>
+          <img
+            class="why-image"
+            src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85"
+            alt="Beautifully designed modern residential interior"
+            loading="lazy"
+          >
+        </div>
+
+        <div>
+          <p class="section-label">WHY ESTATEAURA</p>
+
+          <h2 class="section-title">
+            A more thoughtful<br>
+            <span>way to find property.</span>
+          </h2>
+
+          <p class="section-copy">
+            We believe a good property experience begins with
+            listening. Our approach is centred on your priorities,
+            clear communication and exploring suitable options.
+          </p>
+
+          <div class="why-list">
+
+            <div class="why-item">
+              <div class="check-icon">✓</div>
+              <div>
+                <h3>Personalised Approach</h3>
+                <p>
+                  Property suggestions shaped around your
+                  individual needs and preferences.
+                </p>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div class="check-icon">✓</div>
+              <div>
+                <h3>Clear Communication</h3>
+                <p>
+                  Understand your options and ask questions
+                  before deciding on your next step.
+                </p>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div class="check-icon">✓</div>
+              <div>
+                <h3>Convenient Property Discovery</h3>
+                <p>
+                  Explore property listings and connect with
+                  us to discuss your requirements.
+                </p>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <div class="check-icon">✓</div>
+              <div>
+                <h3>Support Throughout Your Journey</h3>
+                <p>
+                  Get in touch when you need guidance on
+                  exploring your available property options.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="process-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">HOW IT WORKS</p>
+
+          <h2 class="section-title">
+            Three steps to get<br>
+            <span>your journey started.</span>
+          </h2>
+
+          <p>
+            A simple starting point for your next property decision.
+          </p>
+        </div>
+
+        <div class="process-grid">
+
+          <article class="process-card">
+            <div class="process-number">01</div>
+            <h3>Tell Us Your Goals</h3>
+            <p>
+              Share whether you want to buy, sell, rent or
+              explore an investment, along with your preferences.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-number">02</div>
+            <h3>Explore the Options</h3>
+            <p>
+              Review relevant listings and discuss the details
+              that matter to your property search.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-number">03</div>
+            <h3>Plan Your Next Step</h3>
+            <p>
+              Connect with our team to discuss the next steps
+              that make sense for your requirements.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container cta-inner">
+
+        <div>
+          <p class="section-label">LET'S TALK PROPERTY</p>
+          <h2>Have a property goal in mind?</h2>
+          <p>
+            Tell us what you are looking for, and let's start
+            a conversation about your next move.
+          </p>
+        </div>
+
+        <a href="contact.html" class="btn">
+          Contact EstateAura ↗
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Estate<span>Aura.</span></a>
+
+        <p>
+          Real estate, reimagined. Explore property possibilities
+          that fit your lifestyle, goals and vision for the future.
+        </p>
+
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>QUICK LINKS</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="properties.html">Properties</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>OUR SERVICES</h3>
+        <a href="#our-services">Buy a Property</a>
+        <a href="#our-services">Sell a Property</a>
+        <a href="#our-services">Rental Assistance</a>
+        <a href="#our-services">Property Consultation</a>
+        <a href="#our-services">Investment Guidance</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>GET IN TOUCH</h3>
+        <p>
+          Looking for a property or have a question?
+          Start a conversation with our team.
+        </p>
+        <a href="contact.html">Send an Enquiry ↗</a>
+        <a href="properties.html">Explore Listings ↗</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        © <span id="year">2026</span> EstateAura. All rights reserved.
+      </p>
+
+      <div class="footer-legal">
+        <a href="contact.html">Privacy Policy</a>
+        <a href="contact.html">Terms &amp; Conditions</a>
+      </div>
+
+      <a href="#" class="back-top" id="backTop">Back to Top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // Current copyright year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navMenu.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    // Close mobile menu after navigation
+    navMenu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Back to top
+    document.getElementById("backTop").addEventListener("click", function (event) {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+</body>
+</html>

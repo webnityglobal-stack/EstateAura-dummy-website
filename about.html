@@ -1,0 +1,1269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About EstateAura | Your Property, Your Future</title>
+  <meta name="description" content="Discover EstateAura, your partner in finding homes and property opportunities that fit your lifestyle, aspirations and future.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #214b3a;
+      --green-dark: #153529;
+      --sage: #dce8cf;
+      --cream: #f8f8f3;
+      --text: #657168;
+      --dark: #1c2c23;
+      --white: #ffffff;
+      --border: #e8ece5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--dark);
+      background: #fff;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Manrope", sans-serif;
+    }
+
+    .container {
+      width: min(1200px, 88%);
+      margin: auto;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      min-height: 82px;
+      padding: 12px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 5px 22px rgba(20,50,35,.04);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      margin-right: auto;
+    }
+
+    .brand img {
+      width: 185px;
+      height: 56px;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: clamp(18px, 2.3vw, 32px);
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 600;
+      color: #34473b;
+      white-space: nowrap;
+      transition: .25s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #77935e;
+    }
+
+    .nav-links .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      color: #fff;
+      background: var(--green);
+      border-radius: 3px;
+    }
+
+    .nav-links .nav-cta:hover {
+      color: #fff;
+      background: var(--green-dark);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 43px;
+      height: 43px;
+      border: 0;
+      background: var(--cream);
+      color: var(--green);
+      font-size: 25px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      min-height: 590px;
+      display: flex;
+      align-items: center;
+      padding: 90px 6%;
+      color: #fff;
+      background:
+        linear-gradient(90deg,
+          rgba(12,35,26,.88) 0%,
+          rgba(12,35,26,.68) 48%,
+          rgba(12,35,26,.12) 100%),
+        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=90")
+        center 55% / cover no-repeat;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: min(1200px, 100%);
+      margin: auto;
+    }
+
+    .eyebrow {
+      margin-bottom: 18px;
+      color: #78935f;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      line-height: 1.8;
+    }
+
+    .hero .eyebrow {
+      color: #d9e8c9;
+    }
+
+    .hero h1 {
+      max-width: 780px;
+      margin-bottom: 23px;
+      font-size: clamp(43px, 6.4vw, 78px);
+      line-height: 1.08;
+      letter-spacing: -2.5px;
+      font-weight: 700;
+    }
+
+    .hero h1 span {
+      color: #dce8cf;
+    }
+
+    .hero-description {
+      max-width: 580px;
+      margin-bottom: 32px;
+      color: #edf1ed;
+      font-size: 15px;
+      line-height: 1.95;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding: 15px 22px;
+      background: var(--sage);
+      color: var(--green-dark);
+      border: 1px solid transparent;
+      border-radius: 3px;
+      font-size: 13px;
+      font-weight: 800;
+      transition: .25s;
+    }
+
+    .btn:hover {
+      background: #edf4e4;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border-color: rgba(255,255,255,.6);
+    }
+
+    .btn-outline:hover {
+      background: #fff;
+      color: var(--green);
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 105px 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .intro-image {
+      position: relative;
+    }
+
+    .intro-image img {
+      width: 100%;
+      height: 485px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .image-note {
+      position: absolute;
+      left: -20px;
+      bottom: 25px;
+      width: 245px;
+      padding: 21px 23px;
+      color: #fff;
+      background: var(--green);
+      box-shadow: 0 10px 30px #0002;
+    }
+
+    .image-note strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--sage);
+      font: 700 21px "Manrope", sans-serif;
+    }
+
+    .image-note span {
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .intro-copy h2,
+    .section-heading h2 {
+      margin-bottom: 21px;
+      font-size: clamp(31px, 4vw, 47px);
+      line-height: 1.2;
+      letter-spacing: -1.5px;
+    }
+
+    .intro-copy h2 span {
+      color: #77935e;
+    }
+
+    .intro-copy > p:not(.eyebrow) {
+      margin-bottom: 17px;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .check-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 28px 0 30px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+    }
+
+    .check-icon {
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: #edf3e6;
+      color: var(--green);
+      border-radius: 50%;
+      font-weight: 800;
+    }
+
+    .check-item strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 13px;
+    }
+
+    .check-item small {
+      color: var(--text);
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    /* MISSION AND VISION */
+
+    .purpose {
+      padding: 90px 0;
+      background: var(--cream);
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin: 0 auto 46px;
+      text-align: center;
+    }
+
+    .section-heading > p:not(.eyebrow) {
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .purpose-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .purpose-card {
+      position: relative;
+      min-height: 260px;
+      padding: 38px;
+      background: #fff;
+      border: 1px solid #e7ece3;
+      border-radius: 4px;
+      transition: .3s;
+    }
+
+    .purpose-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px #193c2b0d;
+    }
+
+    .purpose-symbol {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 24px;
+      background: #eaf0e3;
+      color: var(--green);
+      font-size: 22px;
+      border-radius: 4px;
+    }
+
+    .purpose-card h3 {
+      margin-bottom: 14px;
+      font-size: 22px;
+    }
+
+    .purpose-card p {
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* VALUES */
+
+    .values {
+      padding: 100px 0;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 23px;
+    }
+
+    .value-card {
+      padding: 30px 26px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: #fff;
+      transition: .3s;
+    }
+
+    .value-card:hover {
+      transform: translateY(-5px);
+      border-color: #cbd8c1;
+      box-shadow: 0 12px 30px #173a290b;
+    }
+
+    .value-icon {
+      display: grid;
+      place-items: center;
+      width: 49px;
+      height: 49px;
+      margin-bottom: 21px;
+      color: var(--green);
+      background: #edf3e6;
+      font-size: 23px;
+      border-radius: 4px;
+    }
+
+    .value-card h3 {
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .value-card p {
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    /* HOW IT WORKS */
+
+    .journey {
+      padding: 90px 0;
+      background: var(--cream);
+    }
+
+    .journey-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    .journey-card {
+      padding-top: 22px;
+      border-top: 2px solid #d8e2d1;
+    }
+
+    .journey-number {
+      color: #78935f;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .journey-card h3 {
+      margin: 15px 0 12px;
+      font-size: 19px;
+    }
+
+    .journey-card p {
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    /* FINAL CTA */
+
+    .cta {
+      padding: 75px 6%;
+      background: var(--green);
+      color: #fff;
+    }
+
+    .cta-inner {
+      width: min(1200px, 100%);
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+    }
+
+    .cta h2 {
+      max-width: 700px;
+      margin-bottom: 15px;
+      font-size: clamp(30px, 4vw, 47px);
+      line-height: 1.2;
+    }
+
+    .cta h2 span {
+      color: var(--sage);
+    }
+
+    .cta p:not(.eyebrow) {
+      max-width: 650px;
+      color: #dce7df;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .cta .btn {
+      flex-shrink: 0;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      padding: 60px 6% 0;
+      background: #122d23;
+      color: #e6eee8;
+    }
+
+    .footer-grid {
+      width: min(1200px, 100%);
+      margin: auto;
+      padding-bottom: 45px;
+      display: grid;
+      grid-template-columns: 1.5fr .8fr .9fr 1.2fr;
+      gap: 40px;
+    }
+
+    .footer-brand img {
+      width: 185px;
+      height: 58px;
+      padding: 3px;
+      margin-bottom: 17px;
+      object-fit: contain;
+      object-position: left center;
+      background: #fff;
+      border-radius: 3px;
+    }
+
+    .footer-brand p,
+    .footer-contact p {
+      max-width: 300px;
+      color: #bdcec2;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 13px;
+    }
+
+    .footer-column h3 {
+      margin: 7px 0;
+      color: var(--sage);
+      font-size: 14px;
+    }
+
+    .footer-column a {
+      color: #dce6df;
+      font-size: 12px;
+      transition: .2s;
+    }
+
+    .footer-column a:hover {
+      color: var(--sage);
+    }
+
+    .footer-button {
+      display: inline-flex;
+      gap: 15px;
+      margin-top: 10px;
+      padding: 12px 15px;
+      background: var(--sage);
+      color: var(--green-dark) !important;
+      font-weight: 800;
+    }
+
+    .footer-bottom {
+      width: min(1200px, 100%);
+      margin: auto;
+      padding: 21px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      border-top: 1px solid #ffffff20;
+    }
+
+    .footer-bottom p,
+    .footer-bottom a {
+      color: #bdcec2;
+      font-size: 11px;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* WHATSAPP */
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 999;
+      width: 55px;
+      height: 55px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: #25d366;
+      box-shadow: 0 5px 20px #0003;
+      font-size: 25px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1000px) {
+      .navbar {
+        padding-left: 4%;
+        padding-right: 4%;
+        gap: 18px;
+      }
+
+      .brand img {
+        width: 160px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .intro-grid {
+        gap: 40px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1.2fr 1fr 1fr;
+        gap: 30px;
+      }
+
+      .footer-contact {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .navbar {
+        min-height: 74px;
+        padding: 10px 5%;
+      }
+
+      .brand img {
+        width: 150px;
+        height: 48px;
+      }
+
+      .menu-toggle {
+        display: inline-grid;
+        place-items: center;
+        margin-left: auto;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 12px 5% 20px;
+        background: #fff;
+        box-shadow: 0 12px 22px #00000012;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 13px 0;
+        font-size: 14px;
+      }
+
+      .nav-links .nav-cta {
+        justify-content: space-between;
+        margin-top: 8px;
+        padding: 14px;
+      }
+
+      .hero {
+        min-height: 560px;
+        padding: 75px 6%;
+        background-position: 60% center;
+      }
+
+      .hero h1 {
+        font-size: clamp(41px, 10vw, 61px);
+        letter-spacing: -1.5px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .hero-buttons {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+      }
+
+      .intro,
+      .values {
+        padding: 70px 0;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .intro-image img {
+        height: 350px;
+      }
+
+      .image-note {
+        left: 12px;
+        bottom: 12px;
+      }
+
+      .check-list {
+        grid-template-columns: 1fr;
+      }
+
+      .purpose,
+      .journey {
+        padding: 70px 0;
+      }
+
+      .purpose-grid,
+      .values-grid,
+      .journey-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .purpose-card {
+        min-height: auto;
+        padding: 28px;
+      }
+
+      .cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .cta .btn {
+        width: 100%;
+      }
+
+      .footer {
+        padding: 45px 6% 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+      }
+
+      .footer-brand,
+      .footer-contact {
+        grid-column: 1 / -1;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .whatsapp {
+        right: 15px;
+        bottom: 15px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .brand img {
+        width: 130px;
+      }
+
+      .hero h1 {
+        font-size: 39px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-brand,
+      .footer-contact {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="brand" aria-label="EstateAura Home">
+      <img src="logo.png" alt="EstateAura">
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-controls="navLinks"
+      aria-expanded="false">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="properties.html">Properties</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">GET TO KNOW ESTATEAURA</p>
+
+        <h1>
+          Every great story<br>
+          begins with a <span>place.</span>
+        </h1>
+
+        <p class="hero-description">
+          We believe finding a property should feel exciting, not overwhelming.
+          EstateAura helps you explore homes and real estate opportunities
+          with a more personal, thoughtful and customer-focused approach.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="properties.html" class="btn">
+            Explore Properties <span>↗</span>
+          </a>
+
+         
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ESTATEAURA -->
+    <section class="intro" id="our-story">
+      <div class="container intro-grid">
+
+        <div class="intro-image">
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+            alt="Beautiful modern home with elegant architecture"
+            loading="lazy">
+
+          <div class="image-note">
+            <strong>Your vision matters.</strong>
+            <span>Thoughtful guidance for your next property decision.</span>
+          </div>
+        </div>
+
+        <div class="intro-copy">
+          <p class="eyebrow">WHO WE ARE</p>
+
+          <h2>
+            Real estate that puts <span>you first.</span>
+          </h2>
+
+          <p>
+            EstateAura is built around a simple belief: every property journey
+            is personal. A first home, a growing family's next move or a
+            property investment all come with different goals and expectations.
+          </p>
+
+          <p>
+            That is why we focus on understanding what matters to you before
+            helping you explore your options. We aim to make property discovery
+            more organised, communication more transparent and decisions more
+            informed.
+          </p>
+
+          <p>
+            From understanding your requirements to exploring suitable
+            opportunities, our approach is centred on your needs, your
+            preferences and your vision for the future.
+          </p>
+
+          <div class="check-list">
+            <div class="check-item">
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>Personal Approach</strong>
+                <small>Guidance shaped around your priorities.</small>
+              </div>
+            </div>
+
+            <div class="check-item">
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>Thoughtful Choices</strong>
+                <small>Explore options that suit your needs.</small>
+              </div>
+            </div>
+
+            <div class="check-item">
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>Clear Communication</strong>
+                <small>Know what to consider at each step.</small>
+              </div>
+            </div>
+
+            <div class="check-item">
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>Customer Focus</strong>
+                <small>Your goals stay at the centre.</small>
+              </div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn">
+            Connect With Us <span>↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MISSION AND VISION -->
+    <section class="purpose">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">OUR PURPOSE</p>
+          <h2>What guides everything we do.</h2>
+          <p>
+            Our approach is grounded in understanding people, respecting their
+            goals and helping them navigate property choices with clarity.
+          </p>
+        </div>
+
+        <div class="purpose-grid">
+
+          <article class="purpose-card">
+            <div class="purpose-symbol">◎</div>
+            <h3>Our Mission</h3>
+            <p>
+              To make the property discovery experience more approachable,
+              informative and customer-focused by helping people explore
+              options that align with their needs, budgets and aspirations.
+            </p>
+          </article>
+
+          <article class="purpose-card">
+            <div class="purpose-symbol">◇</div>
+            <h3>Our Vision</h3>
+            <p>
+              To build a trusted real estate brand known for thoughtful
+              guidance, meaningful customer relationships and a better
+              experience at every stage of the property journey.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR VALUES -->
+    <section class="values">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">WHAT MAKES US DIFFERENT</p>
+          <h2>Values that shape your experience.</h2>
+          <p>
+            Choosing a property is an important decision. We believe the
+            experience should be built on understanding, communication
+            and genuine attention to your requirements.
+          </p>
+        </div>
+
+        <div class="values-grid">
+
+          <article class="value-card">
+            <div class="value-icon">♡</div>
+            <h3>People Before Property</h3>
+            <p>
+              Every customer has a different story. We begin by understanding
+              your lifestyle, priorities and expectations.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <div class="value-icon">◇</div>
+            <h3>Transparency & Clarity</h3>
+            <p>
+              We value straightforward communication so you can understand
+              your options and ask the right questions.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <div class="value-icon">⌂</div>
+            <h3>Quality Choices</h3>
+            <p>
+              We help you focus on relevant property options based on
+              your preferences, budget and intended use.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <div class="value-icon">✧</div>
+            <h3>Thoughtful Guidance</h3>
+            <p>
+              We aim to make each stage easier to navigate with clear
+              conversations and a considered approach.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <div class="value-icon">↗</div>
+            <h3>Future-Focused Thinking</h3>
+            <p>
+              We encourage you to consider your long-term plans when
+              exploring a home or a real estate opportunity.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <div class="value-icon">✓</div>
+            <h3>Relationships Built on Trust</h3>
+            <p>
+              We want every interaction to feel respectful, helpful
+              and focused on what matters to you.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMER JOURNEY -->
+    <section class="journey">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">YOUR JOURNEY WITH US</p>
+          <h2>A clearer path to your next property.</h2>
+          <p>
+            We keep the process focused on your requirements, your questions
+            and the next steps that help you make an informed choice.
+          </p>
+        </div>
+
+        <div class="journey-grid">
+
+          <article class="journey-card">
+            <span class="journey-number">01 / UNDERSTAND</span>
+            <h3>Start With Your Goals</h3>
+            <p>
+              Tell us about your preferred location, budget, property type
+              and the features that matter most to you.
+            </p>
+          </article>
+
+          <article class="journey-card">
+            <span class="journey-number">02 / EXPLORE</span>
+            <h3>Review Your Options</h3>
+            <p>
+              Explore relevant properties, compare important details
+              and discuss your questions before deciding.
+            </p>
+          </article>
+
+          <article class="journey-card">
+            <span class="journey-number">03 / MOVE FORWARD</span>
+            <h3>Make Your Next Move</h3>
+            <p>
+              Take your next step with a clearer understanding of your
+              options and the considerations involved.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="cta-inner">
+
+        <div>
+          <p class="eyebrow" style="color:#dce8cf;">LET'S START A CONVERSATION</p>
+
+          <h2>
+            Your next chapter deserves<br>
+            the <span>right place.</span>
+          </h2>
+
+          <p>
+            Whether you're looking for a home or exploring property
+            opportunities, tell us what you have in mind.
+          </p>
+        </div>
+
+        <a href="contact.html" class="btn">
+          Talk to EstateAura <span>↗</span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="index.html" aria-label="EstateAura Home">
+          <img src="logo.png" alt="EstateAura">
+        </a>
+
+        <p>
+          Thoughtful property choices. Personal guidance.
+          A better way to explore your next place.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="properties.html">Properties</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Discover</h3>
+        <a href="services.html">Our Services</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Let's Connect</h3>
+        <p>
+          Have a question or a property goal in mind?
+          We'd be happy to hear from you.
+        </p>
+        <a href="contact.html" class="footer-button">
+          Get in Touch <span>↗</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> EstateAura. All rights reserved.</p>
+
+      <div class="footer-bottom-links">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP BUTTON: Replace the number with your own -->
+  <a
+    href="https://wa.me/91XXXXXXXXXX"
+    class="whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with EstateAura on WhatsApp"
+    title="Chat on WhatsApp">✆</a>
+
+  <script>
+    // Footer copyright year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Responsive mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", function () {
+        const isOpen = navLinks.classList.toggle("open");
+
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation" : "Open navigation"
+        );
+
+        menuToggle.textContent = isOpen ? "×" : "☰";
+      });
+
+      navLinks.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          navLinks.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation");
+          menuToggle.textContent = "☰";
+        });
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 720) {
+          navLinks.classList.remove("open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.textContent = "☰";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
