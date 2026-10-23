@@ -2,26 +2,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Contact Us | EstateAura Real Estate</title>
-  <meta name="description" content="Contact EstateAura for property buying, selling, renting and real estate enquiries. Let's discuss your property goals.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b3025" />
+  <meta name="description" content="Contact EstateAura for luxury homes, property buying, selling, rentals and real estate investment guidance." />
+  <title>Contact Us | EstateAura</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
     :root {
-      --green: #183f35;
-      --green-dark: #102d26;
-      --gold: #c5a16a;
-      --cream: #f6f4ed;
-      --text: #26352e;
-      --muted: #737b75;
-      --border: #e7e8e1;
-      --white: #ffffff;
+      --green: #0b3025;
+      --green-light: #174638;
+      --gold: #c99a55;
+      --gold-light: #e4c18b;
+      --cream: #f7f4ed;
+      --text: #24332e;
+      --muted: #697771;
+      --white: #fff;
+      --border: #e9e6df;
+      --shadow: 0 12px 35px rgba(11, 48, 37, 0.07);
     }
 
     * {
@@ -32,14 +35,14 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 100px;
+      scroll-padding-top: 85px;
     }
 
     body {
       font-family: "DM Sans", sans-serif;
       color: var(--text);
-      background: white;
-      line-height: 1.7;
+      background: #fff;
+      line-height: 1.65;
     }
 
     a {
@@ -47,79 +50,87 @@
       text-decoration: none;
     }
 
-    button,
-    input,
-    select,
-    textarea {
+    button, input, select, textarea {
       font: inherit;
     }
 
-    button,
-    a {
+    button, a {
       -webkit-tap-highlight-color: transparent;
     }
 
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
     .container {
-      width: min(1160px, 90%);
+      width: min(1180px, 90%);
       margin: auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Playfair Display", serif;
+      line-height: 1.16;
+      font-weight: 600;
     }
 
     /* NAVBAR */
 
-    .navbar {
+    .site-header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,255,255,.97);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.98);
+      border-bottom: 1px solid rgba(11, 48, 37, 0.08);
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.025);
     }
 
-    .nav-inner {
-      min-height: 82px;
+    .navbar {
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 25px;
+      gap: 24px;
     }
 
     .brand {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
       flex-shrink: 0;
     }
 
-    .logo {
-      font-family: "Playfair Display", serif;
-      font-size: 29px;
-      font-weight: 700;
-      letter-spacing: -.7px;
-      color: var(--green);
-    }
-
-    .logo span {
-      color: var(--gold);
-    }
-
-    .brand-caption {
-      display: block;
-      margin-top: -5px;
-      font-size: 9px;
-      letter-spacing: 2.8px;
-      font-weight: 700;
-      color: #777f78;
+    .brand-logo {
+      width: 190px;
+      height: 54px;
+      object-fit: contain;
+      object-position: left center;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 31px;
+      list-style: none;
     }
 
     .nav-links a {
+      display: inline-block;
+      position: relative;
+      padding: 9px 0;
+      color: #25362f;
       font-size: 14px;
-      font-weight: 600;
-      color: #455249;
-      transition: color .2s;
+      font-weight: 500;
+      transition: color 0.25s ease;
     }
 
     .nav-links a:hover,
@@ -127,666 +138,640 @@
       color: var(--gold);
     }
 
-    .nav-links .nav-cta {
-      background: var(--green);
-      color: white;
-      padding: 12px 19px;
-      border-radius: 4px;
-    }
-
-    .nav-links .nav-cta:hover {
-      background: var(--green-dark);
-      color: white;
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      left: 0;
+      right: 0;
+      bottom: 2px;
+      background: var(--gold);
     }
 
     .menu-toggle {
       display: none;
-      background: transparent;
-      border: none;
-      color: var(--green);
-      font-size: 27px;
-      cursor: pointer;
-    }
-
-    /* BUTTONS */
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 48px;
-      padding: 13px 22px;
-      background: var(--gold);
-      border: 1px solid var(--gold);
-      color: white;
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: .25s;
-    }
-
-    .btn:hover {
-      background: #ad8950;
-      border-color: #ad8950;
-      transform: translateY(-2px);
-    }
-
-    .btn-dark {
-      background: var(--green);
-      border-color: var(--green);
-    }
-
-    .btn-dark:hover {
-      background: var(--green-dark);
-      border-color: var(--green-dark);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border-color: rgba(255,255,255,.7);
-      color: white;
-    }
-
-    .btn-outline:hover {
+      width: 43px;
+      height: 43px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
       background: white;
-      border-color: white;
       color: var(--green);
+      cursor: pointer;
+      font-size: 20px;
     }
 
     /* HERO */
 
     .contact-hero {
+      min-height: 450px;
       position: relative;
-      min-height: 420px;
       display: flex;
       align-items: center;
-      color: white;
-      background:
-        linear-gradient(90deg, rgba(12,35,27,.91), rgba(12,35,27,.56)),
-        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85")
-        center 55% / cover no-repeat;
+      overflow: hidden;
+      background-color: var(--green);
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(5, 35, 26, 0.94) 0%,
+          rgba(5, 35, 26, 0.78) 37%,
+          rgba(5, 35, 26, 0.30) 68%,
+          rgba(5, 35, 26, 0.06) 100%
+        ),
+        url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2200&q=90");
+      background-position: center, center 53%;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     .hero-content {
-      padding: 75px 0;
-      max-width: 750px;
+      position: relative;
+      z-index: 1;
+      padding-top: 65px;
+      padding-bottom: 65px;
+      color: white;
     }
 
-    .eyebrow {
-      color: #dfc18d;
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      margin-bottom: 20px;
+      color: var(--gold-light);
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 3px;
+      letter-spacing: 3.5px;
       text-transform: uppercase;
-      margin-bottom: 18px;
     }
 
-    .contact-hero h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(43px, 6vw, 69px);
-      line-height: 1.12;
-      font-weight: 500;
-      margin-bottom: 22px;
+    .hero-eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 45px;
+      height: 2px;
+      background: var(--gold);
     }
 
-    .contact-hero h1 span {
-      color: #dfc18d;
+    .hero-content h1 {
+      max-width: 680px;
+      margin-bottom: 20px;
+      font-size: clamp(43px, 5.5vw, 70px);
+      letter-spacing: -1.8px;
     }
 
-    .hero-description {
-      max-width: 580px;
-      color: #e1e8e1;
+    .hero-content h1 span {
+      display: block;
+      color: var(--gold-light);
+    }
+
+    .hero-content > p {
+      max-width: 510px;
+      color: rgba(255, 255, 255, 0.88);
       font-size: 15px;
-      line-height: 1.9;
-      margin-bottom: 27px;
+      line-height: 1.8;
     }
 
-    /* SECTION HEADINGS */
-
-    .section-label {
-      color: #a4834e;
-      font-size: 11px;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      min-height: 48px;
+      padding: 13px 23px;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      cursor: pointer;
+      font-size: 13px;
       font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
+      transition: transform 0.25s ease, background 0.25s ease;
     }
 
-    .section-title {
-      font-family: "Playfair Display", serif;
-      color: var(--green);
-      font-size: clamp(34px, 4vw, 48px);
-      line-height: 1.2;
-      font-weight: 500;
-      margin-bottom: 18px;
+    .btn:hover {
+      transform: translateY(-2px);
     }
 
-    .section-title span {
-      color: #ad8950;
+    .btn-gold {
+      background: var(--gold);
+      color: white;
     }
 
-    .section-description {
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.95;
+    .btn-gold:hover {
+      background: #b7833d;
+    }
+
+    .hero-content .btn {
+      margin-top: 25px;
+    }
+
+    .hero-highlights {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 26px;
+      color: white;
+      font-size: 12px;
+    }
+
+    .hero-highlights span {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .hero-highlights i {
+      color: var(--gold-light);
+      font-size: 17px;
+    }
+
+    .hero-highlights .separator {
+      width: 1px;
+      height: 19px;
+      background: rgba(255, 255, 255, 0.28);
     }
 
     /* CONTACT SECTION */
 
     .contact-section {
-      padding: 90px 0;
-      background: var(--cream);
-    }
-
-    .contact-heading {
-      max-width: 680px;
-      text-align: center;
-      margin: 0 auto 48px;
+      padding: 68px 0 72px;
     }
 
     .contact-grid {
       display: grid;
-      grid-template-columns: .82fr 1.18fr;
-      gap: 30px;
-      align-items: stretch;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 48px;
+      align-items: start;
     }
 
-    .contact-info {
-      position: relative;
-      overflow: hidden;
-      background: var(--green);
-      color: white;
-      padding: 42px 35px;
+    .contact-intro {
+      padding-top: 12px;
     }
 
-    .contact-info::after {
-      content: "";
-      position: absolute;
-      width: 240px;
-      height: 240px;
-      right: -120px;
-      bottom: -100px;
-      border: 1px solid rgba(223,193,141,.25);
-      border-radius: 50%;
-      box-shadow: 0 0 0 30px rgba(223,193,141,.04),
-                  0 0 0 60px rgba(223,193,141,.035);
-      pointer-events: none;
+    .contact-intro h2 {
+      max-width: 470px;
+      margin-bottom: 17px;
+      color: var(--green);
+      font-size: clamp(35px, 4vw, 47px);
+      letter-spacing: -1px;
     }
 
-    .contact-info h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 31px;
-      font-weight: 500;
-      line-height: 1.3;
-      margin-bottom: 15px;
+    .contact-intro h2 span {
+      color: var(--gold);
     }
 
-    .contact-info > p {
-      color: #d0d9d1;
-      font-size: 13px;
+    .contact-intro > p {
+      max-width: 450px;
+      color: var(--muted);
+      font-size: 14px;
       line-height: 1.9;
-      margin-bottom: 32px;
     }
 
-    .info-item {
+    .contact-details {
+      display: grid;
+      gap: 12px;
+      margin-top: 23px;
+    }
+
+    .contact-detail {
       display: flex;
       align-items: flex-start;
-      gap: 15px;
-      padding: 20px 0;
-      border-top: 1px solid rgba(255,255,255,.16);
-      position: relative;
-      z-index: 1;
+      gap: 17px;
+      padding: 17px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
     }
 
-    .info-icon {
-      width: 43px;
-      height: 43px;
+    .contact-detail:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .detail-icon {
+      width: 49px;
+      height: 49px;
       flex-shrink: 0;
       display: grid;
       place-items: center;
-      background: rgba(223,193,141,.12);
-      border: 1px solid rgba(223,193,141,.25);
-      color: #dfc18d;
+      background: var(--cream);
+      color: var(--gold);
       font-size: 19px;
+      border-radius: 3px;
     }
 
-    .info-item h3 {
-      color: #dfc18d;
-      font-size: 12px;
-      letter-spacing: 1px;
-      margin-bottom: 5px;
+    .contact-detail h3 {
+      margin: 1px 0 4px;
+      color: var(--green);
+      font-family: "DM Sans", sans-serif;
+      font-size: 15px;
+      font-weight: 700;
     }
 
-    .info-item p,
-    .info-item a {
-      color: #f0f3ee;
+    .contact-detail p,
+    .contact-detail a {
+      color: var(--muted);
       font-size: 13px;
-      line-height: 1.8;
       overflow-wrap: anywhere;
     }
 
-    .info-item a:hover {
-      color: #dfc18d;
-    }
-
-    .contact-socials {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 25px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .contact-socials a {
-      color: #dfc18d;
-      font-size: 12px;
-      font-weight: 600;
+    .contact-detail a:hover {
+      color: var(--gold);
     }
 
     /* FORM */
 
-    .contact-form-wrap {
-      padding: 42px;
+    .contact-form-card {
+      padding: 31px;
+      border: 1px solid #eeece7;
+      border-radius: 3px;
+      box-shadow: var(--shadow);
       background: white;
-      border: 1px solid var(--border);
-      box-shadow: 0 12px 35px rgba(25,52,39,.035);
     }
 
-    .contact-form-wrap h2 {
-      font-family: "Playfair Display", serif;
+    .contact-form-card h2 {
+      margin-bottom: 6px;
       color: var(--green);
       font-size: 31px;
-      line-height: 1.3;
-      font-weight: 500;
-      margin-bottom: 9px;
     }
 
-    .form-intro {
+    .form-description {
+      margin-bottom: 22px;
       color: var(--muted);
       font-size: 13px;
-      margin-bottom: 28px;
     }
 
     .form-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 17px;
     }
 
     .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
       min-width: 0;
     }
 
-    .form-group.full {
+    .form-group.full-width {
       grid-column: 1 / -1;
     }
 
     .form-group label {
-      display: block;
-      color: #36463c;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 8px;
+      color: #26352f;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .required {
+      color: #c84d42;
     }
 
     .form-group input,
     .form-group select,
     .form-group textarea {
       width: 100%;
-      min-height: 48px;
-      padding: 12px 14px;
-      border: 1px solid #dfe3dc;
-      background: #fff;
-      border-radius: 0;
+      min-height: 46px;
+      padding: 12px 13px;
+      border: 1px solid #deded9;
+      border-radius: 2px;
       outline: none;
       color: var(--text);
+      background: #fff;
       font-size: 13px;
-      transition: border-color .2s, box-shadow .2s;
-    }
-
-    .form-group textarea {
-      min-height: 125px;
-      resize: vertical;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
       border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(197,161,106,.13);
+      box-shadow: 0 0 0 3px rgba(201, 154, 85, 0.12);
     }
 
-    .form-group input::placeholder,
-    .form-group textarea::placeholder {
-      color: #9aa19a;
+    .form-group textarea {
+      min-height: 105px;
+      resize: vertical;
     }
 
     .form-submit {
       width: 100%;
-      margin-top: 23px;
+      margin-top: 18px;
     }
 
     .form-note {
-      color: var(--muted);
+      margin-top: 10px;
+      color: #808780;
       font-size: 11px;
-      line-height: 1.8;
-      margin-top: 14px;
+      line-height: 1.6;
     }
 
-    /* TRUST STRIP */
+    /* CTA STRIP */
 
-    .trust-section {
-      padding: 65px 0;
-      background: white;
-    }
-
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
-
-    .trust-item {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .trust-icon {
-      font-size: 29px;
-      color: var(--gold);
-      margin-bottom: 13px;
-    }
-
-    .trust-item h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 22px;
-      color: var(--green);
-      margin-bottom: 8px;
-      font-weight: 500;
-    }
-
-    .trust-item p {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.8;
-    }
-
-    /* MAP */
-
-    .location-section {
-      padding: 75px 0 90px;
-      background: var(--cream);
-    }
-
-    .location-heading {
-      text-align: center;
-      max-width: 650px;
-      margin: 0 auto 35px;
-    }
-
-    .map-placeholder {
-      min-height: 280px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px;
+    .cta-strip {
+      padding: 35px 0;
       background:
-        linear-gradient(rgba(16,45,38,.78), rgba(16,45,38,.78)),
-        url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80")
-        center / cover no-repeat;
-      color: white;
-    }
-
-    .map-placeholder h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 31px;
-      font-weight: 500;
-      margin-bottom: 12px;
-    }
-
-    .map-placeholder p {
-      color: #e1e8e1;
-      font-size: 13px;
-      margin-bottom: 22px;
-    }
-
-    /* CTA */
-
-    .cta-section {
-      padding: 75px 0;
-      background: var(--green);
-      color: white;
+        radial-gradient(ellipse at 100% 0%, rgba(201, 154, 85, 0.13), transparent 45%),
+        var(--cream);
     }
 
     .cta-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 25px;
     }
 
     .cta-inner h2 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(29px, 4vw, 43px);
-      line-height: 1.25;
-      font-weight: 500;
-      margin-bottom: 12px;
+      margin-bottom: 7px;
+      color: var(--green);
+      font-size: clamp(27px, 3.2vw, 37px);
     }
 
     .cta-inner p {
-      color: #d0d9d1;
-      font-size: 13px;
+      color: var(--muted);
+      font-size: 14px;
     }
 
-    .cta-inner .btn {
+    .btn-green {
       flex-shrink: 0;
+      background: var(--green);
+      color: white;
+    }
+
+    .btn-green:hover {
+      background: var(--green-light);
     }
 
     /* FOOTER */
 
     .site-footer {
-      background: var(--green-dark);
+      padding: 43px 0 0;
+      background: var(--green);
       color: white;
     }
 
-    .footer-container {
-      width: min(1160px, 90%);
-      margin: auto;
-      padding: 58px 0 42px;
+    .footer-grid {
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1.1fr;
-      gap: 32px;
+      grid-template-columns: 1.25fr 0.7fr 0.9fr 1.05fr;
+      gap: 36px;
+      padding-bottom: 30px;
     }
 
-    .footer-brand .logo {
-      display: inline-block;
-      color: white;
-      margin-bottom: 14px;
+    .footer-logo {
+      width: 185px;
+      height: 53px;
+      object-fit: contain;
+      object-position: left center;
+      margin-bottom: 10px;
     }
 
-    .footer-brand > p {
-      color: #c5d0c7;
+    .footer-about > p {
+      max-width: 270px;
+      color: rgba(255, 255, 255, 0.72);
       font-size: 13px;
-      line-height: 1.9;
-      margin-bottom: 20px;
-      max-width: 280px;
+      line-height: 1.8;
     }
 
-    .footer-socials {
+    .social-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 9px;
+      margin-top: 16px;
     }
 
-    .footer-socials a {
-      color: #dfc18d;
-      font-size: 12px;
+    .social-links a {
+      width: 31px;
+      height: 31px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+      color: white;
+      font-size: 13px;
+      transition: background 0.2s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--gold);
     }
 
     .footer-column h3 {
-      color: #dfc18d;
+      margin: 5px 0 16px;
+      color: var(--gold-light);
+      font-family: "DM Sans", sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.3px;
+      text-transform: uppercase;
+    }
+
+    .footer-column ul {
+      display: grid;
+      gap: 8px;
+      list-style: none;
+    }
+
+    .footer-column li,
+    .footer-column a,
+    .footer-column p {
+      color: rgba(255, 255, 255, 0.75);
       font-size: 12px;
-      letter-spacing: 1.4px;
-      margin-bottom: 19px;
+      line-height: 1.7;
     }
 
-    .footer-column > a {
-      display: block;
-      width: fit-content;
-      color: #c5d0c7;
-      font-size: 13px;
-      margin-bottom: 11px;
+    .footer-column a:hover {
+      color: var(--gold-light);
     }
 
-    .footer-column > a:hover,
-    .footer-socials a:hover {
-      color: white;
-    }
-
-    .footer-column > p {
-      color: #c5d0c7;
-      font-size: 13px;
-      line-height: 1.8;
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
       margin-bottom: 12px;
     }
 
+    .footer-contact-item i {
+      margin-top: 4px;
+      color: var(--gold-light);
+    }
+
     .footer-bottom {
-      width: min(1160px, 90%);
-      margin: auto;
-      padding: 21px 0;
-      border-top: 1px solid rgba(255,255,255,.15);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding: 15px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .footer-bottom p,
-    .footer-legal a,
-    .back-top {
-      color: #c5d0c7;
-      font-size: 12px;
+    .footer-bottom a {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 11px;
     }
 
     .footer-legal {
       display: flex;
+      align-items: center;
+      gap: 15px;
       flex-wrap: wrap;
-      gap: 16px;
     }
 
-    .footer-legal a:hover,
-    .back-top:hover {
-      color: #dfc18d;
+    .footer-legal a:hover {
+      color: var(--gold-light);
     }
 
-    /* WHATSAPP FLOATING BUTTON */
+    /* WHATSAPP FLOAT BUTTON */
 
     .whatsapp-float {
       position: fixed;
-      right: 23px;
-      bottom: 23px;
+      right: 22px;
+      bottom: 22px;
       z-index: 900;
-      width: 57px;
-      height: 57px;
+      width: 55px;
+      height: 55px;
       display: grid;
       place-items: center;
       border-radius: 50%;
-      background: #20bd70;
+      background: #20c76a;
       color: white;
-      font-size: 25px;
-      font-weight: 700;
-      box-shadow: 0 7px 25px rgba(0,0,0,.18);
-      transition: transform .2s;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      font-size: 27px;
+      transition: transform 0.25s ease;
     }
 
     .whatsapp-float:hover {
-      transform: translateY(-4px);
+      transform: scale(1.07);
     }
 
     /* RESPONSIVE */
 
-    @media (max-width: 1000px) {
+    @media (max-width: 950px) {
       .nav-links {
-        gap: 16px;
+        gap: 19px;
       }
 
       .contact-grid {
-        grid-template-columns: .9fr 1.1fr;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 28px;
       }
 
-      .contact-info,
-      .contact-form-wrap {
-        padding: 30px 25px;
+      .contact-form-card {
+        padding: 24px;
       }
 
-      .footer-container {
-        grid-template-columns: repeat(2, 1fr);
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
       }
     }
 
-    @media (max-width: 760px) {
-      .nav-inner {
-        min-height: 72px;
+    @media (max-width: 720px) {
+      .navbar {
+        min-height: 68px;
+      }
+
+      .brand-logo {
+        width: 165px;
+        height: 48px;
       }
 
       .menu-toggle {
-        display: block;
+        display: grid;
+        place-items: center;
       }
 
       .nav-links {
-        display: none;
         position: absolute;
-        top: 72px;
+        top: 100%;
         left: 0;
-        width: 100%;
-        padding: 24px 5%;
-        flex-direction: column;
+        right: 0;
+        display: none;
         align-items: stretch;
-        gap: 18px;
+        gap: 0;
+        padding: 8px 5% 15px;
         background: white;
         border-top: 1px solid var(--border);
-        box-shadow: 0 12px 25px rgba(0,0,0,.08);
+        box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
       }
 
       .nav-links.open {
         display: flex;
+        flex-direction: column;
       }
 
-      .nav-links .nav-cta {
-        width: fit-content;
+      .nav-links li {
+        width: 100%;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 12px 2px;
+        border-bottom: 1px solid #f0eee9;
+      }
+
+      .nav-links a.active::after {
+        display: none;
       }
 
       .contact-hero {
-        min-height: 390px;
+        min-height: 470px;
+        background-position: center, 58% center;
+        background-image:
+          linear-gradient(
+            90deg,
+            rgba(5, 35, 26, 0.91),
+            rgba(5, 35, 26, 0.65)
+          ),
+          url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85");
       }
 
       .hero-content {
-        padding: 65px 0;
+        padding-top: 57px;
+        padding-bottom: 55px;
+      }
+
+      .hero-content h1 {
+        font-size: clamp(42px, 10vw, 58px);
+        letter-spacing: -1px;
+      }
+
+      .hero-content > p {
+        font-size: 14px;
+      }
+
+      .hero-highlights {
+        gap: 11px 16px;
+      }
+
+      .hero-highlights .separator {
+        display: none;
       }
 
       .contact-section {
-        padding: 65px 0;
+        padding: 49px 0;
       }
 
       .contact-grid {
         grid-template-columns: 1fr;
+        gap: 32px;
       }
 
-      .contact-info,
-      .contact-form-wrap {
-        padding: 32px 25px;
+      .contact-intro {
+        padding-top: 0;
       }
 
-      .trust-grid {
-        grid-template-columns: 1fr;
-        gap: 8px;
+      .contact-intro h2 {
+        font-size: 39px;
       }
 
-      .trust-item {
-        padding: 15px;
+      .contact-form-card {
+        padding: 23px 18px;
+      }
+
+      .contact-form-card h2 {
+        font-size: 29px;
       }
 
       .cta-inner {
@@ -794,40 +779,55 @@
         flex-direction: column;
       }
 
-      .footer-bottom {
-        align-items: flex-start;
-        flex-direction: column;
+      .footer-grid {
+        gap: 28px 22px;
       }
     }
 
-    @media (max-width: 520px) {
-      .contact-hero h1 {
-        font-size: 42px;
-      }
-
-      .hero-description {
-        font-size: 14px;
+    @media (max-width: 440px) {
+      .container {
+        width: 90%;
       }
 
       .form-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 14px;
       }
 
-      .form-group.full {
+      .form-group.full-width {
         grid-column: auto;
       }
 
-      .footer-container {
+      .hero-eyebrow {
+        gap: 10px;
+        font-size: 10px;
+        letter-spacing: 2.2px;
+      }
+
+      .hero-eyebrow::before {
+        width: 27px;
+      }
+
+      .hero-content h1 {
+        font-size: 42px;
+      }
+
+      .footer-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 24px;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
       }
 
       .whatsapp-float {
+        width: 49px;
+        height: 49px;
         right: 15px;
         bottom: 15px;
-        width: 52px;
-        height: 52px;
+        font-size: 24px;
       }
     }
 
@@ -836,511 +836,922 @@
         scroll-behavior: auto;
       }
 
-      *,
-      *::before,
-      *::after {
-        transition-duration: .01ms !important;
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
       }
     }
+    ```css
+/* =====================================
+   ESTATEAURA FOOTER
+===================================== */
+
+.footer {
+  background: #122d23;
+  color: #ffffff;
+  padding: 55px 6% 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+.footer-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 42px;
+
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.9fr 1.2fr;
+  gap: 38px;
+  align-items: start;
+}
+
+/* BRAND */
+
+.footer-brand {
+  min-width: 0;
+}
+
+.footer-brand > a {
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+.footer-brand img {
+  display: block;
+  width: 175px;
+  height: 58px;
+  padding: 4px;
+  object-fit: contain;
+  object-position: left center;
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+.footer-brand p {
+  max-width: 290px;
+  margin: 0;
+  color: #bdcec2;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* FOOTER COLUMNS */
+
+.footer-column {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.footer-column h3 {
+  margin: 5px 0 9px;
+  color: #dce8cf;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.footer-column a {
+  color: #dce6df;
+  font-size: 13px;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color 0.25s ease,
+              transform 0.25s ease;
+}
+
+.footer-column a:hover {
+  color: #dce8cf;
+  transform: translateX(4px);
+}
+
+/* CONTACT SECTION */
+
+.footer-contact p {
+  max-width: 290px;
+  margin: 0;
+  color: #bdcec2;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.footer-column .footer-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  margin-top: 8px;
+  padding: 13px 17px;
+
+  background: #dce8cf;
+  color: #153529;
+  border: 1px solid #dce8cf;
+  border-radius: 3px;
+
+  font-size: 12px;
+  font-weight: 800;
+  transition: all 0.25s ease;
+}
+
+.footer-column .footer-button:hover {
+  background: #ffffff;
+  color: #153529;
+  transform: translateY(-2px);
+}
+
+/* BOTTOM COPYRIGHT BAR */
+
+.footer-bottom {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 21px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #bdcec2;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.footer-bottom-links a {
+  color: #bdcec2;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #dce8cf;
+}
+
+/* TABLET */
+
+@media (min-width: 721px) and (max-width: 1000px) {
+  .footer {
+    padding: 45px 5% 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 30px 24px;
+  }
+
+  .footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  .footer-contact p {
+    max-width: 420px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 720px) {
+  .footer {
+    padding: 38px 6% 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 22px;
+    padding-bottom: 32px;
+  }
+
+  .footer-brand,
+  .footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand img {
+    width: 160px;
+    height: 54px;
+  }
+
+  .footer-brand p,
+  .footer-contact p {
+    max-width: 340px;
+    font-size: 13px;
+  }
+
+  .footer-column {
+    gap: 11px;
+  }
+
+  .footer-column h3 {
+    margin: 3px 0 7px;
+    font-size: 14px;
+  }
+
+  .footer-column a {
+    font-size: 12px;
+  }
+
+  .footer-column .footer-button {
+    margin-top: 5px;
+    padding: 12px 16px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 0 20px;
+  }
+
+  .footer-bottom-links {
+    gap: 18px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+  .footer {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .footer-grid {
+    column-gap: 15px;
+  }
+
+  .footer-brand img {
+    width: 145px;
+  }
+
+  .footer-column a {
+    font-size: 11px;
+  }
+
+  .footer-bottom p,
+  .footer-bottom-links a {
+    font-size: 11px;
+  }
+}
+```css
+/* ==================================
+   ESTATEAURA FOOTER COLOR FIX
+   Paste at the END of your CSS
+================================== */
+
+footer.footer {
+  background-color: #122d23 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  padding: 55px 6% 0;
+}
+
+/* Footer layout */
+footer.footer .footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.9fr 1.2fr;
+  gap: 38px;
+  align-items: start;
+}
+
+/* Brand description */
+footer.footer .footer-brand p,
+footer.footer .footer-contact p {
+  color: #bdcec2 !important;
+  line-height: 1.9;
+}
+
+/* Column headings */
+footer.footer .footer-column h3 {
+  color: #dce8cf !important;
+  font-size: 15px;
+}
+
+/* All footer links */
+footer.footer .footer-column a,
+footer.footer .footer-bottom-links a {
+  color: #e0e9e2 !important;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+footer.footer .footer-column a:hover,
+footer.footer .footer-bottom-links a:hover {
+  color: #dce8cf !important;
+}
+
+/* Get in Touch button */
+footer.footer .footer-column a.footer-button {
+  background-color: #dce8cf !important;
+  color: #153529 !important;
+  border: 1px solid #dce8cf;
+  padding: 13px 17px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+footer.footer .footer-column a.footer-button:hover {
+  background-color: #ffffff !important;
+  color: #153529 !important;
+}
+
+/* Copyright bar */
+footer.footer .footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 21px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+footer.footer .footer-bottom p {
+  color: #bdcec2 !important;
+  margin: 0;
+}
+
+footer.footer .footer-bottom-links {
+  display: flex;
+  gap: 22px;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  footer.footer .footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px 24px;
+  }
+
+  footer.footer .footer-contact {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  footer.footer {
+    padding: 38px 6% 0;
+  }
+
+  footer.footer .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 20px;
+    padding-bottom: 30px;
+  }
+
+  footer.footer .footer-brand,
+  footer.footer .footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  footer.footer .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  footer.footer .footer-grid {
+    column-gap: 14px;
+  }
+}
+```
+``````css
+/* CONTACT.HTML — FOOTER COLOR FIX */
+
+.footer {
+  background: #122d23 !important;
+  color: #512626 !important;
+}
+
+.footer-brand p,
+.footer-contact p {
+  color: #1e3e27 !important;
+}
+
+.footer-column h3 {
+  color: #243511 !important;
+}
+
+.footer-column a {
+  color: #153b1f !important;
+}
+
+.footer-column a:hover {
+  color: #223014 !important;
+}
+
+.footer-column .footer-button {
+  background: #1f8b4f !important;
+  color: #153529 !important;
+}
+
+.footer-column .footer-button:hover {
+  background: #ffffff !important;
+  color: #153529 !important;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+.footer-bottom p,
+.footer-bottom-links a {
+  color: #1b4728 !important;
+}
+
+.footer-bottom-links a:hover {
+  color: #375a12 !important;
+}
+``````css
+/* ===== CONTACT PAGE FOOTER FIX ===== */
+
+footer.footer {
+  display: block !important;
+  width: 100% !important;
+  background-color: #122d23 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  padding: 55px 6% 0 !important;
+  opacity: 1 !important;
+}
+
+/* Footer layout */
+footer.footer .footer-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.9fr 1.2fr;
+  gap: 38px;
+}
+
+/* Logo description */
+footer.footer .footer-brand p,
+footer.footer .footer-contact p {
+  color: #bdcec2 !important;
+}
+
+/* Headings */
+footer.footer .footer-column h3 {
+  color: #dce8cf !important;
+}
+
+/* Links */
+footer.footer .footer-column a,
+footer.footer .footer-bottom-links a {
+  color: #e6eee8 !important;
+}
+
+/* Contact button */
+footer.footer .footer-column .footer-button {
+  background-color: #dce8cf !important;
+  color: #153529 !important;
+}
+
+/* Bottom copyright */
+footer.footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+footer.footer .footer-bottom p {
+  color: #bdcec2 !important;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  footer.footer .footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  footer.footer .footer-contact {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  footer.footer {
+    padding: 38px 6% 0 !important;
+  }
+
+  footer.footer .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 20px;
+  }
+
+  footer.footer .footer-brand,
+  footer.footer .footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  footer.footer .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+```
   </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="container nav-inner">
-
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container navbar">
       <a href="index.html" class="brand" aria-label="EstateAura Home">
-        <span class="logo">EstateAura<span>.</span></span>
-        <span class="brand-caption">REAL ESTATE, REIMAGINED</span>
+        <img src="logo.png" alt="EstateAura" class="brand-logo">
       </a>
 
       <button
         class="menu-toggle"
         id="menuToggle"
-        type="button"
         aria-label="Open navigation menu"
         aria-expanded="false"
-        aria-controls="navMenu"
-      >☰</button>
+        aria-controls="navLinks"
+        type="button"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-      <nav class="nav-links" id="navMenu" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="properties.html">Properties</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html" >Contect</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        </ul>
       </nav>
-
     </div>
   </header>
 
   <main>
 
-    <!-- HERO -->
+    <!-- MODERN LUXURY HERO -->
     <section class="contact-hero">
       <div class="container hero-content">
-
-        <p class="eyebrow">WE'RE HERE TO HELP</p>
+        <div class="hero-eyebrow">We're here to help</div>
 
         <h1>
-          Let's talk about<br>
+          Let's talk about
           <span>your next move.</span>
         </h1>
 
-        <p class="hero-description">
-          Whether you are searching for a new home, planning to sell
+        <p>
+          Whether you're searching for a new home, planning to sell
           or exploring property opportunities, we'd love to hear
           what you have in mind.
         </p>
 
-        <a href="#contact-form" class="btn">
-          Send an Enquiry ↗
-        </a>
+       
 
+        <div class="hero-highlights">
+          <span><i class="fa-regular fa-circle-check"></i> Personalised assistance</span>
+          <span class="separator"></span>
+          <span><i class="fa-regular fa-circle-check"></i> Property guidance</span>
+          <span class="separator"></span>
+          <span><i class="fa-regular fa-circle-check"></i> Let's discuss your goals</span>
+        </div>
       </div>
     </section>
 
-    <!-- CONTACT FORM AND DETAILS -->
-    <section class="contact-section" id="contact-form">
-      <div class="container">
+    <!-- CONTACT DETAILS + FORM -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
 
-        <div class="contact-heading">
-          <p class="section-label">GET IN TOUCH</p>
+        <div class="contact-intro">
+          <span class="section-label">Get in touch</span>
 
-          <h2 class="section-title">
-            Start a conversation<br>
-            <span>with EstateAura.</span>
+          <h2>
+            Every great move starts with a
+            <span>conversation.</span>
           </h2>
 
-          <p class="section-description">
+          <p>
             Tell us a little about your property requirements.
-            Fill out the form and continue your enquiry through
-            WhatsApp.
+            Whether you're buying, selling, renting or exploring
+            investment options, our team is ready to hear from you.
           </p>
-        </div>
 
-        <div class="contact-grid">
+          <div class="contact-details">
 
-          <!-- CONTACT DETAILS -->
-          <aside class="contact-info">
-            <h2>We'd love to hear from you.</h2>
-
-            <p>
-              Have a question about a listing or need help deciding
-              where to start? Reach out using the details below.
-            </p>
-
-            <div class="info-item">
-              <div class="info-icon" aria-hidden="true">⌖</div>
+            <div class="contact-detail">
+              <div class="detail-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
               <div>
-                <h3>OUR LOCATION</h3>
-                <p>Update this section with your office address.</p>
+                <h3>Visit Us</h3>
+                <p>Contact us to discuss your property requirements.</p>
               </div>
             </div>
 
-            <div class="info-item">
-              <div class="info-icon" aria-hidden="true">✆</div>
+            <div class="contact-detail">
+              <div class="detail-icon">
+                <i class="fa-regular fa-envelope"></i>
+              </div>
               <div>
-                <h3>PHONE / WHATSAPP</h3>
-                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
-                  +91 98765 43210
-                </a>
-                <p>Replace with your business number.</p>
+                <h3>Email Enquiries</h3>
+                <a href="mailto:info@estateaura.com">info@estateaura.com</a>
               </div>
             </div>
 
-            <div class="info-item">
-              <div class="info-icon" aria-hidden="true">✉</div>
-              <div>
-                <h3>EMAIL US</h3>
-                <a href="mailto:hello@estateaura.com">
-                  hello@estateaura.com
-                </a>
-                <p>Replace with your business email.</p>
+            <div class="contact-detail">
+              <div class="detail-icon">
+                <i class="fa-regular fa-clock"></i>
               </div>
-            </div>
-
-            <div class="info-item">
-              <div class="info-icon" aria-hidden="true">◷</div>
               <div>
-                <h3>WORKING HOURS</h3>
+                <h3>Business Hours</h3>
                 <p>Monday – Saturday</p>
-                <p>10:00 AM – 6:00 PM</p>
+                <p>Contact us to arrange a suitable time.</p>
               </div>
             </div>
 
-            <div class="contact-socials">
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            </div>
-          </aside>
-
-          <!-- ENQUIRY FORM -->
-          <div class="contact-form-wrap">
-
-            <h2>Send us an enquiry</h2>
-
-            <p class="form-intro">
-              Complete the details below to prepare your enquiry.
-            </p>
-
-            <form id="enquiryForm">
-
-              <div class="form-grid">
-
-                <div class="form-group">
-                  <label for="fullName">Full Name *</label>
-                  <input
-                    type="text"
-                    id="fullName"
-                    name="fullName"
-                    placeholder="Enter your full name"
-                    autocomplete="name"
-                    required
-                  >
-                </div>
-
-                <div class="form-group">
-                  <label for="phone">Phone Number *</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="Enter your phone number"
-                    autocomplete="tel"
-                    inputmode="tel"
-                    pattern="[0-9+() -]{8,20}"
-                    required
-                  >
-                </div>
-
-                <div class="form-group">
-                  <label for="email">Email Address</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="you@example.com"
-                    autocomplete="email"
-                  >
-                </div>
-
-                <div class="form-group">
-                  <label for="service">I'm Interested In *</label>
-                  <select id="service" name="service" required>
-                    <option value="">Choose a service</option>
-                    <option value="Buying a Property">Buying a Property</option>
-                    <option value="Selling a Property">Selling a Property</option>
-                    <option value="Renting a Property">Renting a Property</option>
-                    <option value="Commercial Property">Commercial Property</option>
-                    <option value="Property Investment">Property Investment</option>
-                    <option value="General Consultation">General Consultation</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="budget">Preferred Budget</label>
-                  <select id="budget" name="budget">
-                    <option value="">Select your budget</option>
-                    <option value="Under ₹25 lakh">Under ₹25 lakh</option>
-                    <option value="₹25–50 lakh">₹25–50 lakh</option>
-                    <option value="₹50 lakh–₹1 crore">₹50 lakh–₹1 crore</option>
-                    <option value="₹1–2 crore">₹1–2 crore</option>
-                    <option value="Above ₹2 crore">Above ₹2 crore</option>
-                    <option value="Not decided">Not decided</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="location">Preferred Location</label>
-                  <input
-                    type="text"
-                    id="location"
-                    name="location"
-                    placeholder="City or neighbourhood"
-                  >
-                </div>
-
-                <div class="form-group full">
-                  <label for="message">Tell Us More *</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Describe the property or assistance you need..."
-                    required
-                  ></textarea>
-                </div>
-
-              </div>
-
-              <button type="submit" class="btn btn-dark form-submit">
-                Continue on WhatsApp ↗
-              </button>
-
-              <p class="form-note">
-                This form prepares a message in WhatsApp. It does not
-                store or email your details. Please review the message
-                before sending it.
-              </p>
-
-              <p
-                id="formStatus"
-                role="status"
-                aria-live="polite"
-                style="margin-top:12px;font-size:13px;color:#183f35;"
-              ></p>
-
-            </form>
           </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY CONTACT US -->
-    <section class="trust-section">
-      <div class="container">
-
-        <div class="contact-heading">
-          <p class="section-label">THE ESTATEAURA DIFFERENCE</p>
-          <h2 class="section-title">
-            A better experience<br>
-            <span>starts with a conversation.</span>
-          </h2>
         </div>
 
-        <div class="trust-grid">
+        <!-- ENQUIRY FORM -->
+        <div class="contact-form-card" id="contactForm">
+          <span class="section-label">Send an enquiry</span>
+          <h2>How can we help you?</h2>
 
-          <article class="trust-item">
-            <div class="trust-icon" aria-hidden="true">◇</div>
-            <h3>Personalised Guidance</h3>
-            <p>
-              Share your priorities and discuss the property
-              options that best fit your requirements.
-            </p>
-          </article>
-
-          <article class="trust-item">
-            <div class="trust-icon" aria-hidden="true">⌂</div>
-            <h3>Explore Properties</h3>
-            <p>
-              Browse available listings and tell us which
-              locations or property types interest you.
-            </p>
-          </article>
-
-          <article class="trust-item">
-            <div class="trust-icon" aria-hidden="true">✓</div>
-            <h3>Clear Communication</h3>
-            <p>
-              Ask questions, discuss your requirements and
-              understand the next steps before proceeding.
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- LOCATION -->
-    <section class="location-section">
-      <div class="container">
-
-        <div class="location-heading">
-          <p class="section-label">FIND US</p>
-          <h2 class="section-title">
-            Let's connect.
-          </h2>
-          <p class="section-description">
-            Ready to discuss your property goals? Get in touch
-            with EstateAura to start your enquiry.
+          <p class="form-description">
+            Complete the form and continue to WhatsApp to send your enquiry.
           </p>
-        </div>
 
-        <div class="map-placeholder">
-          <div>
-            <h3>EstateAura Real Estate</h3>
-            <p>Contact us to discuss your property requirements.</p>
-            <a href="contact.html#contact-form" class="btn">
-              Get in Touch ↗
-            </a>
-          </div>
+          <form id="enquiryForm">
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="Enter your name"
+                  autocomplete="name"
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Your phone number"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="interest">I'm Interested In <span class="required">*</span></label>
+                <select id="interest" name="interest" required>
+                  <option value="">Select a service</option>
+                  <option value="Buying a Property">Buying a Property</option>
+                  <option value="Selling a Property">Selling a Property</option>
+                  <option value="Renting a Property">Renting a Property</option>
+                  <option value="Luxury Homes">Luxury Homes</option>
+                  <option value="Real Estate Investment">Real Estate Investment</option>
+                  <option value="Property Consultation">Property Consultation</option>
+                  <option value="Other Enquiry">Other Enquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="budget">Preferred Budget</label>
+                <select id="budget" name="budget">
+                  <option value="">Select your budget (optional)</option>
+                  <option value="Under ₹25 lakh">Under ₹25 lakh</option>
+                  <option value="₹25 lakh – ₹50 lakh">₹25 lakh – ₹50 lakh</option>
+                  <option value="₹50 lakh – ₹1 crore">₹50 lakh – ₹1 crore</option>
+                  <option value="₹1 crore – ₹3 crore">₹1 crore – ₹3 crore</option>
+                  <option value="Above ₹3 crore">Above ₹3 crore</option>
+                  <option value="Not decided">Not decided yet</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="message">Your Message <span class="required">*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us about your property requirements..."
+                  required
+                ></textarea>
+              </div>
+
+            </div>
+
+            <button type="submit" class="btn btn-gold form-submit">
+              Continue to WhatsApp
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </button>
+
+            <p class="form-note">
+              Your enquiry will open in WhatsApp for you to review and send.
+            </p>
+          </form>
         </div>
 
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="cta-section">
+    <section class="cta-strip">
       <div class="container cta-inner">
-
         <div>
-          <h2>Your next property chapter starts here.</h2>
-          <p>
-            Tell us what you are looking for and let's start a conversation.
-          </p>
+          <span class="section-label">Your next chapter</span>
+          <h2>Let's find the right opportunity for you.</h2>
+          <p>Start a conversation about your real estate goals today.</p>
         </div>
 
-        <a href="#contact-form" class="btn">
-          Send Your Enquiry ↗
-        </a>
-
+        
       </div>
     </section>
 
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-container">
+ <footer class="footer" style="background: #122d23 !important; color: #ffffff !important;"></footer>
+    <div class="footer-grid">
 
       <div class="footer-brand">
-        <a href="index.html" class="logo">Estate<span>Aura.</span></a>
+        <a href="index.html" aria-label="EstateAura Home">
+          <img src="logo.png" alt="EstateAura">
+        </a>
 
         <p>
-          Real estate, reimagined. Explore property possibilities
-          that fit your lifestyle, goals and vision for the future.
+          Thoughtful property choices. Personal guidance.
+          A better way to explore your next place.
         </p>
-
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-        </div>
       </div>
 
       <div class="footer-column">
-        <h3>QUICK LINKS</h3>
+        <h3>Explore</h3>
         <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
+        <a href="about.html">About</a>
         <a href="properties.html">Properties</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
       </div>
 
       <div class="footer-column">
-        <h3>EXPLORE</h3>
-        <a href="properties.html">Residential Properties</a>
-        <a href="properties.html">Commercial Properties</a>
-        <a href="services.html">Property Buying</a>
-        <a href="services.html">Rental Assistance</a>
-        <a href="services.html">Investment Guidance</a>
+        <h3>Discover</h3>
+        <a href="services.html">Our Services</a>
+        <a href="contact.html">Contact Us</a>
       </div>
 
-      <div class="footer-column">
-        <h3>CONTACT</h3>
-        <p>Have a question about a property?</p>
-        <a href="#contact-form">Send an Enquiry ↗</a>
-        <a href="mailto:hello@estateaura.com">Email Us ↗</a>
-        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+      <div class="footer-column footer-contact">
+        <h3>Let's Connect</h3>
+        <p>
+          Have a question or a property goal in mind?
+          We'd be happy to hear from you.
+        </p>
+        <a href="contact.html" class="footer-button">
+          Get in Touch <span>↗</span>
+        </a>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      <p>
-        © <span id="year">2026</span> EstateAura. All rights reserved.
-      </p>
+      <p>© <span id="year"></span> EstateAura. All rights reserved.</p>
 
-      <div class="footer-legal">
-        <a href="#contact-form">Privacy Policy</a>
-        <a href="#contact-form">Terms &amp; Conditions</a>
+      <div class="footer-bottom-links">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
       </div>
-
-      <a href="#" class="back-top" id="backTop">Back to Top ↑</a>
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP -->
+  <!-- WHATSAPP FLOAT BUTTON -->
+  <!-- IMPORTANT: Replace the sample number below with your real WhatsApp number -->
   <a
     class="whatsapp-float"
+    id="whatsappFloat"
     href="https://wa.me/919876543210"
     target="_blank"
     rel="noopener noreferrer"
-    aria-label="Contact EstateAura on WhatsApp"
-    title="Chat on WhatsApp"
-  >✆</a>
+    aria-label="Chat with us on WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
   <script>
-    // Copyright year
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-    // Mobile navigation
+    // MOBILE NAVIGATION
     const menuToggle = document.getElementById("menuToggle");
-    const navMenu = document.getElementById("navMenu");
+    const navLinks = document.getElementById("navLinks");
+    const menuIcon = menuToggle.querySelector("i");
 
     menuToggle.addEventListener("click", function () {
-      const isOpen = navMenu.classList.toggle("open");
+      const isOpen = navLinks.classList.toggle("open");
 
       menuToggle.setAttribute("aria-expanded", String(isOpen));
       menuToggle.setAttribute(
         "aria-label",
         isOpen ? "Close navigation menu" : "Open navigation menu"
       );
-      menuToggle.textContent = isOpen ? "✕" : "☰";
+
+      menuIcon.classList.toggle("fa-bars", !isOpen);
+      menuIcon.classList.toggle("fa-xmark", isOpen);
     });
 
-    navMenu.querySelectorAll("a").forEach(function (link) {
+    // CLOSE MOBILE MENU WHEN A LINK IS SELECTED
+    navLinks.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        navMenu.classList.remove("open");
+        navLinks.classList.remove("open");
         menuToggle.setAttribute("aria-expanded", "false");
         menuToggle.setAttribute("aria-label", "Open navigation menu");
-        menuToggle.textContent = "☰";
+
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
       });
     });
 
-    // Prepare enquiry in WhatsApp
-    document.getElementById("enquiryForm").addEventListener("submit", function (event) {
+    // CURRENT YEAR
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    // CONTACT FORM -> WHATSAPP
+    const enquiryForm = document.getElementById("enquiryForm");
+
+    enquiryForm.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      const form = event.currentTarget;
-
-      if (!form.reportValidity()) {
+      if (!enquiryForm.reportValidity()) {
         return;
       }
 
+      // Replace with your actual WhatsApp number, including country code.
+      // India example: 91 + 10-digit mobile number. Do not include + or spaces.
+      const WHATSAPP_NUMBER = "919876543210";
+
       const fullName = document.getElementById("fullName").value.trim();
-      const phone = document.getElementById("phone").value.trim();
       const email = document.getElementById("email").value.trim();
-      const service = document.getElementById("service").value;
+      const phone = document.getElementById("phone").value.trim();
+      const interest = document.getElementById("interest").value;
       const budget = document.getElementById("budget").value || "Not specified";
-      const location = document.getElementById("location").value.trim() || "Not specified";
       const message = document.getElementById("message").value.trim();
 
-      const whatsappNumber = "919876543210"; // Replace with your real WhatsApp number
+      const whatsappMessage = [
+        "Hello EstateAura!",
+        "",
+        "I would like to enquire about your real estate services.",
+        "",
+        "Name: " + fullName,
+        "Email: " + email,
+        "Phone: " + phone,
+        "Interested In: " + interest,
+        "Preferred Budget: " + budget,
+        "",
+        "Message: " + message
+      ].join("\n");
 
-      const whatsappMessage =
-        "Hello EstateAura,%0A%0A" +
-        "*New Property Enquiry*%0A" +
-        "Name: " + encodeURIComponent(fullName) + "%0A" +
-        "Phone: " + encodeURIComponent(phone) + "%0A" +
-        "Email: " + encodeURIComponent(email || "Not provided") + "%0A" +
-        "Service: " + encodeURIComponent(service) + "%0A" +
-        "Budget: " + encodeURIComponent(budget) + "%0A" +
-        "Preferred Location: " + encodeURIComponent(location) + "%0A" +
-        "Message: " + encodeURIComponent(message);
+      const whatsappURL =
+        "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        encodeURIComponent(whatsappMessage);
 
-      const status = document.getElementById("formStatus");
-      status.textContent = "Opening WhatsApp. Please review your message and press Send.";
-
-      const whatsappUrl =
-        "https://wa.me/" + whatsappNumber + "?text=" + whatsappMessage;
-
-      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-    });
-
-    // Back to top
-    document.getElementById("backTop").addEventListener("click", function (event) {
-      event.preventDefault();
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+      window.open(whatsappURL, "_blank", "noopener,noreferrer");
     });
   </script>
 

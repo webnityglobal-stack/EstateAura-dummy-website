@@ -15,23 +15,22 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
 
 <!-- HEADER / NAVBAR -->
 <header class="header">
   <div class="container nav">
 
-   
-<a href="#home" class="brand" aria-label="EstateAura home">
-  <img src="logo.png" alt="EstateAura" class="brand-logo">
-</a>
-
+    <a href="index.html" class="brand" aria-label="EstateAura home">
+      <img src="logo.png" alt="EstateAura" class="brand-logo">
+    </a>
 
     <nav class="nav-links" id="navMenu" aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="properties.html">Properties</a>
-      <a href="about.html">About Us</a>
-      <a href="services.html"> Services</a>
+      <a href="about.html">About</a>
+      <a href="Properties.html">Properties</a>
+      <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
 
@@ -87,9 +86,14 @@
       </div>
 
       <div class="search-fields">
+
         <div class="field">
           <label for="locationSearch">LOCATION</label>
-          <input id="locationSearch" type="text" placeholder="City or neighbourhood">
+          <input
+            id="locationSearch"
+            type="text"
+            placeholder="City or neighbourhood"
+          >
         </div>
 
         <div class="field">
@@ -115,6 +119,7 @@
         <button class="btn btn-green search-submit" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i> Search
         </button>
+
       </div>
     </form>
   </div>
@@ -134,7 +139,7 @@
           </p>
         </div>
 
-        <a href="#contact" class="btn btn-outline">
+        <a href="Properties.html" class="btn btn-outline">
           Find your property <i class="fa-solid fa-arrow-right"></i>
         </a>
       </div>
@@ -181,12 +186,6 @@
                 ₹1.85 Cr
                 <small>Indicative asking price</small>
               </div>
-
-              <a class="view-link property-enquire"
-                href="#contact"
-                data-property="Greenwood Residence">
-                Enquire <i class="fa-solid fa-arrow-right"></i>
-              </a>
             </div>
           </div>
         </article>
@@ -231,12 +230,6 @@
                 ₹78 Lakh
                 <small>Indicative asking price</small>
               </div>
-
-              <a class="view-link property-enquire"
-                href="#contact"
-                data-property="Azure Heights">
-                Enquire <i class="fa-solid fa-arrow-right"></i>
-              </a>
             </div>
           </div>
         </article>
@@ -281,12 +274,6 @@
                 ₹4.2 Cr
                 <small>Indicative asking price</small>
               </div>
-
-              <a class="view-link property-enquire"
-                href="#contact"
-                data-property="The Willow Estate">
-                Enquire <i class="fa-solid fa-arrow-right"></i>
-              </a>
             </div>
           </div>
         </article>
@@ -378,7 +365,7 @@
             Discover homes that align with your needs, preferred location and budget,
             with guidance through the buying journey.
           </p>
-          <a href="#contact" class="service-link" data-service="Buy a Property">
+          <a href="properties.html" class="service-link" data-service="Buy a Property">
             Find your home <i class="fa-solid fa-arrow-right"></i>
           </a>
         </article>
@@ -392,7 +379,7 @@
             Explore rental options for comfortable living, convenient locations
             and a home that feels right for you.
           </p>
-          <a href="#contact" class="service-link" data-service="Rent a Property">
+          <a href="properties.html" class="service-link" data-service="Rent a Property">
             Explore rentals <i class="fa-solid fa-arrow-right"></i>
           </a>
         </article>
@@ -406,7 +393,7 @@
             Present your property effectively, connect with interested buyers
             and navigate the selling process with clarity.
           </p>
-          <a href="#contact" class="service-link" data-service="Sell a Property">
+          <a href="properties.html" class="service-link" data-service="Sell a Property">
             Discuss your property <i class="fa-solid fa-arrow-right"></i>
           </a>
         </article>
@@ -426,9 +413,7 @@
           <p>Tell us what you're looking for. Let's explore the possibilities together.</p>
         </div>
 
-        <a href="#contact" class="btn btn-white">
-          Start Your Search <i class="fa-solid fa-arrow-right"></i>
-        </a>
+        
 
       </div>
     </div>
@@ -594,69 +579,57 @@
 </main>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-
+ <footer class="footer">
     <div class="footer-grid">
 
-      <div>
-      
-<a href="#home" class="brand" aria-label="EstateAura home">
-  <img src="logo.png" alt="EstateAura" class="brand-logo">
-</a>
+      <div class="footer-brand">
+        <a href="index.html" aria-label="EstateAura Home">
+          <img src="logo.png" alt="EstateAura">
+        </a>
 
-
-        <p class="footer-about">
-          Thoughtfully selected properties. Personal guidance.
-          A better way to find your next place to call home.
+        <p>
+          Thoughtful property choices. Personal guidance.
+          A better way to explore your next place.
         </p>
-
-        <div class="socials">
-          <a href="#contact" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#contact" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#contact" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        </div>
       </div>
 
-      <div>
-        <h4>EXPLORE</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="properties.html">Featured Properties</a></li>
-          <li><a href="about.html">About EstateAura</a></li>
-          <li><a href="services.html">Our Services</a></li>
-        </ul>
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="properties.html">Properties</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
       </div>
 
-      <div>
-        <h4>PROPERTY SERVICES</h4>
-        <ul class="footer-links">
-          <li><a href="#contact" class="service-link" data-service="Buy a Property">Buy a Property</a></li>
-          <li><a href="#contact" class="service-link" data-service="Rent a Property">Rent a Property</a></li>
-          <li><a href="#contact" class="service-link" data-service="Sell a Property">Sell a Property</a></li>
-          <li><a href="#contact">Property Consultation</a></li>
-        </ul>
+      <div class="footer-column">
+        <h3>Discover</h3>
+        <a href="services.html">Our Services</a>
+        <a href="contact.html">Contact Us</a>
       </div>
 
-      <div>
-        <h4>GET IN TOUCH</h4>
-        <ul class="footer-links">
-          <li><a href="#contact"><i class="fa-solid fa-location-dot"></i> Your office address</a></li>
-          <li><a href="#contact"><i class="fa-solid fa-phone"></i> Your phone number</a></li>
-          <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Your email address</a></li>
-        </ul>
+      <div class="footer-column footer-contact">
+        <h3>Let's Connect</h3>
+        <p>
+          Have a question or a property goal in mind?
+          We'd be happy to hear from you.
+        </p>
+        <a href="contact.html" class="footer-button">
+          Get in Touch <span>↗</span>
+        </a>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      <span>© <span id="year"></span> EstateAura. All rights reserved.</span>
-      <span>Designed for better living.</span>
+      <p>© <span id="year"></span> EstateAura. All rights reserved.</p>
+
+      <div class="footer-bottom-links">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
-
-  </div>
-</footer>
-
+  </footer>
 <!-- FLOATING BUTTONS -->
 <button class="back-top" id="backTop" type="button" aria-label="Back to top">
   <i class="fa-solid fa-arrow-up"></i>
@@ -674,6 +647,104 @@
 </a>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- HOMEPAGE SEARCH: send selected filters to Properties page -->
+
+
+<!-- ESTATEAURA HOMEPAGE PROPERTY SEARCH -->
+<script>
+(function () {
+  const form = document.getElementById("propertySearch");
+
+  if (!form) return;
+
+  const tabs = form.querySelectorAll(".search-tab");
+  const locationInput = document.getElementById("locationSearch");
+  const typeSelect = document.getElementById("typeSearch");
+  const budgetSelect = document.getElementById("budgetSearch");
+
+  let selectedPurpose = "buy";
+
+  // Buy aur Rent ke liye alag budget options.
+  const budgetOptions = {
+    buy: [
+      ["all", "Any budget"],
+      ["5000000", "Up to ₹50 lakh"],
+      ["10000000", "Up to ₹1 crore"],
+      ["20000000", "Up to ₹2 crore"],
+      ["50000000", "Up to ₹5 crore"]
+    ],
+    rent: [
+      ["all", "Any monthly rent"],
+      ["10000", "Up to ₹10,000/month"],
+      ["25000", "Up to ₹25,000/month"],
+      ["50000", "Up to ₹50,000/month"],
+      ["100000", "Up to ₹1 lakh/month"],
+      ["200000", "Up to ₹2 lakh/month"]
+    ]
+  };
+
+  function updateBudgetOptions() {
+    const options = budgetOptions[selectedPurpose] || budgetOptions.buy;
+
+    budgetSelect.replaceChildren();
+
+    options.forEach(function (item) {
+      const option = document.createElement("option");
+      option.value = item[0];
+      option.textContent = item[1];
+      budgetSelect.appendChild(option);
+    });
+
+    budgetSelect.value = "all";
+  }
+
+  // Buy / Rent / Sell tabs.
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      selectedPurpose = (tab.dataset.purpose || "Buy").toLowerCase();
+
+      tabs.forEach(function (item) {
+        item.classList.remove("active");
+      });
+
+      tab.classList.add("active");
+
+      if (selectedPurpose === "buy" || selectedPurpose === "rent") {
+        updateBudgetOptions();
+      } else {
+        budgetSelect.value = "all";
+      }
+    });
+  });
+
+  // Search results Properties.html par bhejo.
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const location = locationInput.value.trim();
+    const propertyType = typeSelect.value.toLowerCase();
+    const budget = budgetSelect.value;
+
+    // Sell tab: user ko contact enquiry form par bhejo.
+    if (selectedPurpose === "sell") {
+      window.location.href = "index.html#contact";
+      return;
+    }
+
+    const params = new URLSearchParams();
+
+    params.set("searchText", location);
+    params.set("purposeSelect", selectedPurpose);
+    params.set("typeSelect", propertyType);
+    params.set("budgetSelect", budget);
+    params.set("mode", selectedPurpose);
+
+    window.location.href = "Properties.html?" + params.toString();
+  });
+})();
+</script>
+
 
 </body>
 </html>

@@ -22,12 +22,7 @@
       --shadow: 0 15px 40px rgba(24,47,39,.09);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
 
     body {
@@ -45,20 +40,6 @@
       margin: auto;
     }
 
-    .topbar {
-      background: var(--green);
-      color: #e7eee9;
-      padding: 9px 0;
-      font-size: 12px;
-    }
-
-    .topbar .container {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
     header {
       position: sticky;
       top: 0;
@@ -72,68 +53,36 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 24px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 11px;
-      color: var(--green);
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 1.2;
+      flex-shrink: 0;
+      margin-right: auto;
     }
 
-    .brand-icon {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      background: var(--green);
-      color: var(--gold);
-      border-radius: 12px;
-      font-family: 'Playfair Display', serif;
-      font-size: 25px;
-    }
-
-    .brand small {
+    .brand-logo {
       display: block;
-      font-size: 9px;
-      letter-spacing: 2px;
-      color: var(--muted);
-      margin-top: 5px;
+      width: 190px;
+      height: 58px;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: left center;
     }
 
     .navlinks {
       display: flex;
       align-items: center;
       gap: 28px;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
-      color: #52615a;
+      color: #26342e;
     }
 
     .navlinks a:hover,
     .navlinks a.active { color: var(--green); }
-
-    .nav-cta, .primary-btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--green);
-      color: white;
-      padding: 13px 19px;
-      border-radius: 5px;
-      font-size: 12px;
-      font-weight: 700;
-      transition: .2s;
-    }
-
-    .nav-cta:hover, .primary-btn:hover {
-      background: var(--green-light);
-      transform: translateY(-2px);
-    }
 
     .menu-toggle {
       display: none;
@@ -168,72 +117,18 @@
     }
 
     .hero p {
-      max-width: 570px;
+      max-width: 700px;
       color: #e0e8e3;
-      font-size: 15px;
+      font-size: 16px;
     }
 
     .breadcrumb {
       margin-top: 25px;
-      font-size: 12px;
+      font-size: 14px;
       color: #d5e0da;
     }
 
     .breadcrumb a { color: white; }
-
-    .search-wrap {
-      position: relative;
-      margin-top: -39px;
-    }
-
-    .search-panel {
-      padding: 23px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr auto;
-      gap: 12px;
-      align-items: end;
-    }
-
-    .field label {
-      display: block;
-      margin-bottom: 7px;
-      color: var(--muted);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .field input, .field select {
-      width: 100%;
-      height: 46px;
-      padding: 0 12px;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      outline: none;
-      background: white;
-      color: var(--ink);
-      font-size: 12px;
-    }
-
-    .field input:focus, .field select:focus {
-      border-color: var(--green);
-    }
-
-    .search-btn {
-      height: 46px;
-      padding: 0 22px;
-      border: 0;
-      border-radius: 6px;
-      background: var(--green);
-      color: white;
-      font-size: 12px;
-      font-weight: 700;
-      cursor: pointer;
-    }
 
     .section { padding: 65px 0 85px; }
 
@@ -254,12 +149,12 @@
     .cta p {
       margin-top: 9px;
       color: var(--muted);
-      font-size: 13px;
+      font-size: 14px;
     }
 
     .results-count {
       color: var(--muted);
-      font-size: 12px;
+      font-size: 14px;
       white-space: nowrap;
     }
 
@@ -271,18 +166,19 @@
     }
 
     .filter-chip {
-      padding: 9px 17px;
+      padding: 12px 22px;
       border: 1px solid var(--line);
       border-radius: 30px;
       background: white;
       color: #536159;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 700;
       cursor: pointer;
       transition: .2s;
     }
 
-    .filter-chip:hover, .filter-chip.active {
+    .filter-chip:hover,
+    .filter-chip.active {
       background: var(--green);
       border-color: var(--green);
       color: white;
@@ -371,7 +267,7 @@
 
     .location {
       color: var(--muted);
-      font-size: 12px;
+      font-size: 13px;
     }
 
     .location span {
@@ -379,9 +275,7 @@
       margin-right: 5px;
     }
 
-    .price-row {
-      margin: 17px 0 15px;
-    }
+    .price-row { margin: 17px 0 15px; }
 
     .price {
       color: var(--green);
@@ -391,7 +285,7 @@
 
     .price small {
       color: var(--muted);
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 500;
     }
 
@@ -402,7 +296,7 @@
       padding-top: 14px;
       border-top: 1px solid #edf0eb;
       color: #536159;
-      font-size: 11px;
+      font-size: 12px;
     }
 
     .card-bottom {
@@ -417,12 +311,12 @@
 
     .card-bottom small {
       color: #849087;
-      font-size: 10px;
+      font-size: 11px;
     }
 
     .details-link {
       color: var(--green);
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
     }
 
@@ -460,16 +354,31 @@
       gap: 10px;
     }
 
+    .primary-btn,
     .outline-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       padding: 13px 19px;
-      border: 1px solid #cbd4cd;
       border-radius: 5px;
-      color: var(--green);
       font-size: 12px;
       font-weight: 700;
+      transition: .2s;
+    }
+
+    .primary-btn {
+      background: var(--green);
+      color: white;
+    }
+
+    .primary-btn:hover {
+      background: var(--green-light);
+      transform: translateY(-2px);
+    }
+
+    .outline-btn {
+      border: 1px solid #cbd4cd;
+      color: var(--green);
     }
 
     footer {
@@ -484,6 +393,11 @@
       flex-wrap: wrap;
       gap: 35px;
       padding-bottom: 34px;
+    }
+
+    .footer-brand {
+      color: white;
+      font: 600 24px 'Playfair Display', serif;
     }
 
     .footer-description {
@@ -536,15 +450,13 @@
     }
 
     @media(max-width: 1000px) {
-      .search-panel { grid-template-columns: repeat(3, 1fr); }
       .property-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .search-btn { width: 100%; }
       .navlinks { gap: 16px; }
     }
 
     @media(max-width: 720px) {
-      .topbar .container { justify-content: center; text-align: center; }
       .navbar { height: 70px; }
+      .brand-logo { width: 150px; height: 48px; }
       .menu-toggle { display: block; }
 
       .navlinks {
@@ -562,10 +474,7 @@
       }
 
       .navlinks.open { display: flex; }
-      .nav-cta { display: none; }
       .hero { padding: 58px 0 78px; }
-      .search-panel { grid-template-columns: 1fr 1fr; padding: 17px; }
-      .field:first-child, .search-btn { grid-column: 1 / -1; }
       .section { padding: 48px 0 62px; }
 
       .section-heading {
@@ -585,407 +494,669 @@
     @media(max-width: 480px) {
       .property-grid { grid-template-columns: 1fr; }
       .property-image { height: 235px; }
-      .search-panel { grid-template-columns: 1fr; }
-      .field:first-child, .search-btn { grid-column: auto; }
       .hero h1 { font-size: 40px; }
       .property-content h3 { font-size: 21px; }
+      .filter-chip { padding: 10px 15px; }
     }
-    
-/* EstateAura Logo Size Fix */
-.brand-logo {
-  display: block;
-  width: 190px;
-  height: 58px;
-  max-width: 100%;
-  object-fit: contain;
-  object-position: left center;
-  flex-shrink: 0;
+    ```css
+/* =====================================
+   ESTATEAURA FOOTER
+===================================== */
+
+.footer {
+  background: #122d23;
+  color: #ffffff;
+  padding: 55px 6% 0;
+  font-family: "DM Sans", sans-serif;
 }
 
-/* Navbar spacing */
-.navbar {
+.footer-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 42px;
+
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.9fr 1.2fr;
+  gap: 38px;
+  align-items: start;
+}
+
+/* BRAND */
+
+.footer-brand {
+  min-width: 0;
+}
+
+.footer-brand > a {
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+.footer-brand img {
+  display: block;
+  width: 175px;
+  height: 58px;
+  padding: 4px;
+  object-fit: contain;
+  object-position: left center;
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+.footer-brand p {
+  max-width: 290px;
+  margin: 0;
+  color: #bdcec2;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* FOOTER COLUMNS */
+
+.footer-column {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.footer-column h3 {
+  margin: 5px 0 9px;
+  color: #dce8cf;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.footer-column a {
+  color: #dce6df;
+  font-size: 13px;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color 0.25s ease,
+              transform 0.25s ease;
+}
+
+.footer-column a:hover {
+  color: #dce8cf;
+  transform: translateX(4px);
+}
+
+/* CONTACT SECTION */
+
+.footer-contact p {
+  max-width: 290px;
+  margin: 0;
+  color: #bdcec2;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.footer-column .footer-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  margin-top: 8px;
+  padding: 13px 17px;
+
+  background: #dce8cf;
+  color: #153529;
+  border: 1px solid #dce8cf;
+  border-radius: 3px;
+
+  font-size: 12px;
+  font-weight: 800;
+  transition: all 0.25s ease;
+}
+
+.footer-column .footer-button:hover {
+  background: #ffffff;
+  color: #153529;
+  transform: translateY(-2px);
+}
+
+/* BOTTOM COPYRIGHT BAR */
+
+.footer-bottom {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 21px 0;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-.navbar .brand {
-  flex-shrink: 0;
-  margin-right: auto;
+.footer-bottom p {
+  margin: 0;
+  color: #bdcec2;
+  font-size: 12px;
+  line-height: 1.7;
 }
 
-/* Mobile */
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.footer-bottom-links a {
+  color: #bdcec2;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #dce8cf;
+}
+
+/* TABLET */
+
+@media (min-width: 721px) and (max-width: 1000px) {
+  .footer {
+    padding: 45px 5% 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 30px 24px;
+  }
+
+  .footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  .footer-contact p {
+    max-width: 420px;
+  }
+}
+
+/* MOBILE */
+
 @media (max-width: 720px) {
-  .brand-logo {
-    width: 150px;
-    height: 48px;
+  .footer {
+    padding: 38px 6% 0;
   }
 
-  .navbar {
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 22px;
+    padding-bottom: 32px;
+  }
+
+  .footer-brand,
+  .footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand img {
+    width: 160px;
+    height: 54px;
+  }
+
+  .footer-brand p,
+  .footer-contact p {
+    max-width: 340px;
+    font-size: 13px;
+  }
+
+  .footer-column {
+    gap: 11px;
+  }
+
+  .footer-column h3 {
+    margin: 3px 0 7px;
+    font-size: 14px;
+  }
+
+  .footer-column a {
+    font-size: 12px;
+  }
+
+  .footer-column .footer-button {
+    margin-top: 5px;
+    padding: 12px 16px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
     gap: 12px;
+    padding: 18px 0 20px;
+  }
+
+  .footer-bottom-links {
+    gap: 18px;
   }
 }
 
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+  .footer {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .footer-grid {
+    column-gap: 15px;
+  }
+
+  .footer-brand img {
+    width: 145px;
+  }
+
+  .footer-column a {
+    font-size: 11px;
+  }
+
+  .footer-bottom p,
+  .footer-bottom-links a {
+    font-size: 11px;
+  }
+}
+```
   </style>
 </head>
 
 <body>
 
-  
+<header>
+  <div class="container navbar">
+    <a href="index.html" class="brand" aria-label="EstateAura home">
+      <img src="logo.png" alt="EstateAura" class="brand-logo">
+    </a>
 
-  <header>
-    <div class="container navbar">
-      
-<a href="#home" class="brand" aria-label="EstateAura home">
-  <img src="logo.png" alt="EstateAura" class="brand-logo">
-</a>
+    <button class="menu-toggle" id="menuToggle" type="button"
+      aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    <nav class="navlinks" id="navlinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="Properties.html">Properties</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-      <nav class="navlinks" id="navlinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a class="active" href="properties.html">Properties</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <div class="eyebrow">Find a place to call yours</div>
-        <h1>Discover spaces that feel like home.</h1>
-        <p>
-          Explore thoughtfully selected homes, premium apartments,
-          private villas and commercial spaces designed around your lifestyle.
-        </p>
-        <div class="breadcrumb">
-          <a href="index.html">Home</a> &nbsp; / &nbsp; Properties
-        </div>
+<main>
+  <!-- HERO: EXTRA SEARCH FORM REMOVED -->
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Find a place to call yours</div>
+      <h1>Discover spaces that feel like home.</h1>
+      <p>
+        Explore thoughtfully selected homes, premium apartments,
+        private villas and commercial spaces designed around your lifestyle.
+      </p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> &nbsp; / &nbsp; Properties
       </div>
-    </section>
-
-    <div class="container search-wrap">
-      <form class="search-panel" id="searchForm">
-        <div class="field">
-          <label for="searchText">Location or property</label>
-          <input id="searchText" type="search" placeholder="Try Noida, villa, apartment...">
-        </div>
-
-        <div class="field">
-          <label for="purposeSelect">Looking to</label>
-          <select id="purposeSelect">
-            <option value="all">Buy or Rent</option>
-            <option value="buy">Buy</option>
-            <option value="rent">Rent</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="typeSelect">Property type</label>
-          <select id="typeSelect">
-            <option value="all">All types</option>
-            <option value="apartment">Apartment</option>
-            <option value="villa">Villa</option>
-            <option value="house">Independent house</option>
-            <option value="commercial">Commercial</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="budgetSelect">Maximum budget</label>
-          <select id="budgetSelect">
-            <option value="all">Any budget</option>
-            <option value="5000000">Up to ₹50 Lakh</option>
-            <option value="10000000">Up to ₹1 Crore</option>
-            <option value="20000000">Up to ₹2 Crore</option>
-            <option value="50000000">Up to ₹5 Crore</option>
-          </select>
-        </div>
-
-        <button class="search-btn" type="submit">Search ↗</button>
-      </form>
     </div>
+  </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <div class="eyebrow">Explore our collection</div>
-            <h2>Properties worth discovering.</h2>
-            <p>Find the right space for your next chapter.</p>
+  <!-- PROPERTY COLLECTION -->
+  <section class="section" id="propertyCollection">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Explore our collection</div>
+          <h2>Properties worth discovering.</h2>
+          <p>Find the right space for your next chapter.</p>
+        </div>
+        <div class="results-count" id="resultsCount">Showing 5 properties</div>
+      </div>
+
+      <div class="filter-row">
+        <button class="filter-chip active" data-filter="all">All Properties</button>
+        <button class="filter-chip" data-filter="buy">For Sale</button>
+        <button class="filter-chip" data-filter="rent">For Rent</button>
+        <button class="filter-chip" data-filter="apartment">Apartments</button>
+        <button class="filter-chip" data-filter="villa">Villas</button>
+        <button class="filter-chip" data-filter="commercial">Commercial</button>
+      </div>
+
+      <div class="property-grid" id="propertyGrid">
+
+        <article class="property-card"
+          data-type="apartment" data-purpose="buy" data-price="18500000"
+          data-search="the verdant residence luxury apartment noida sector 150">
+          <div class="property-image">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+              alt="Modern luxury apartment">
+            <span class="tag">FEATURED</span>
+            <button class="heart" type="button" aria-label="Save The Verdant Residence">♡</button>
           </div>
-          <div class="results-count" id="resultsCount">Showing 6 properties</div>
-        </div>
-
-        <div class="filter-row">
-          <button class="filter-chip active" data-filter="all">All Properties</button>
-          <button class="filter-chip" data-filter="buy">For Sale</button>
-          <button class="filter-chip" data-filter="rent">For Rent</button>
-          <button class="filter-chip" data-filter="apartment">Apartments</button>
-          <button class="filter-chip" data-filter="villa">Villas</button>
-          <button class="filter-chip" data-filter="commercial">Commercial</button>
-        </div>
-
-        <div class="property-grid" id="propertyGrid">
-
-          <article class="property-card"
-            data-type="apartment" data-purpose="buy" data-price="18500000"
-            data-search="the verdant residence luxury apartment noida sector 150">
-            <div class="property-image">
-              <img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85" alt="Modern luxury apartment">
-              <span class="tag">FEATURED</span>
-              <button class="heart" aria-label="Save The Verdant Residence">♡</button>
+          <div class="property-content">
+            <div class="property-type">Luxury Apartment · For Sale</div>
+            <h3>The Verdant Residence</h3>
+            <div class="location"><span>⌖</span> Sector 150, Noida</div>
+            <div class="price-row"><div class="price">₹1.85 Cr <small>onwards</small></div></div>
+            <div class="detail-row"><span>▦ 3 BHK</span><span>⌂ 1,850 sq.ft.</span><span>♧ 3 Baths</span></div>
+            <div class="card-bottom">
+              <small>Premium living</small>
+              <a class="details-link" href="index.html#contact">Enquire ↗</a>
             </div>
-            <div class="property-content">
-              <div class="property-type">Luxury Apartment · For Sale</div>
-              <h3>The Verdant Residence</h3>
-              <div class="location"><span>⌖</span> Sector 150, Noida</div>
-              <div class="price-row"><div class="price">₹1.85 Cr <small>onwards</small></div></div>
-              <div class="detail-row"><span>▦ 3 BHK</span><span>⌂ 1,850 sq.ft.</span><span>♧ 3 Baths</span></div>
-              <div class="card-bottom">
-                <small>Premium living</small>
-                <a class="details-link" href="index.html#contact">Enquire ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="property-card"
-            data-type="villa" data-purpose="buy" data-price="42500000"
-            data-search="aurelia garden villa gurugram golf course road">
-            <div class="property-image">
-              <img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Contemporary villa with landscaped garden">
-              <span class="tag">PREMIUM</span>
-              <button class="heart" aria-label="Save Aurelia Garden Villa">♡</button>
-            </div>
-            <div class="property-content">
-              <div class="property-type">Private Villa · For Sale</div>
-              <h3>Aurelia Garden Villa</h3>
-              <div class="location"><span>⌖</span> Golf Course Road, Gurugram</div>
-              <div class="price-row"><div class="price">₹4.25 Cr</div></div>
-              <div class="detail-row"><span>▦ 4 BHK</span><span>⌂ 3,200 sq.ft.</span><span>♧ 4 Baths</span></div>
-              <div class="card-bottom">
-                <small>Garden-facing home</small>
-                <a class="details-link" href="index.html#contact">Enquire ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="property-card"
-            data-type="apartment" data-purpose="rent" data-price="65000"
-            data-search="the skyline penthouse apartment saket new delhi">
-            <div class="property-image">
-              <img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85" alt="Bright premium apartment interior">
-              <span class="tag">FOR RENT</span>
-              <button class="heart" aria-label="Save The Skyline Penthouse">♡</button>
-            </div>
-            <div class="property-content">
-              <div class="property-type">Premium Apartment · For Rent</div>
-              <h3>The Skyline Penthouse</h3>
-              <div class="location"><span>⌖</span> Saket, New Delhi</div>
-              <div class="price-row"><div class="price">₹65,000 <small>/ month</small></div></div>
-              <div class="detail-row"><span>▦ 3 BHK</span><span>⌂ 1,600 sq.ft.</span><span>♧ 3 Baths</span></div>
-              <div class="card-bottom">
-                <small>Move-in ready</small>
-                <a class="details-link" href="index.html#contact">Enquire ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="property-card"
-            data-type="house" data-purpose="buy" data-price="12500000"
-            data-search="olive courtyard independent house indirapuram ghaziabad">
-            <div class="property-image">
-              <img loading="lazy" src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1000&q=85" alt="Modern independent family home">
-              <span class="tag">NEW LISTING</span>
-              <button class="heart" aria-label="Save Olive Courtyard">♡</button>
-            </div>
-            <div class="property-content">
-              <div class="property-type">Independent House · For Sale</div>
-              <h3>Olive Courtyard</h3>
-              <div class="location"><span>⌖</span> Indirapuram, Ghaziabad</div>
-              <div class="price-row"><div class="price">₹1.25 Cr</div></div>
-              <div class="detail-row"><span>▦ 3 BHK</span><span>⌂ 1,450 sq.ft.</span><span>♧ 3 Baths</span></div>
-              <div class="card-bottom">
-                <small>Family-friendly area</small>
-                <a class="details-link" href="index.html#contact">Enquire ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="property-card"
-            data-type="commercial" data-purpose="rent" data-price="120000"
-            data-search="the work loft commercial office noida sector 62">
-            <div class="property-image">
-              <img loading="lazy" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85" alt="Modern commercial office space">
-              <span class="tag">COMMERCIAL</span>
-              <button class="heart" aria-label="Save The Work Loft">♡</button>
-            </div>
-            <div class="property-content">
-              <div class="property-type">Office Space · For Rent</div>
-              <h3>The Work Loft</h3>
-              <div class="location"><span>⌖</span> Sector 62, Noida</div>
-              <div class="price-row"><div class="price">₹1.2 Lakh <small>/ month</small></div></div>
-              <div class="detail-row"><span>▦ Office</span><span>⌂ 2,100 sq.ft.</span><span>♧ 2 Cabins</span></div>
-              <div class="card-bottom">
-                <small>Business-ready space</small>
-                <a class="details-link" href="index.html#contact">Enquire ↗</a>
-              </div>
-            </div>
+          </div>
         </article>
 
-        </div>
+        <article class="property-card"
+          data-type="villa" data-purpose="buy" data-price="42500000"
+          data-search="aurelia garden villa gurugram golf course road">
+          <div class="property-image">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+              alt="Contemporary villa with landscaped garden">
+            <span class="tag">PREMIUM</span>
+            <button class="heart" type="button" aria-label="Save Aurelia Garden Villa">♡</button>
+          </div>
+          <div class="property-content">
+            <div class="property-type">Private Villa · For Sale</div>
+            <h3>Aurelia Garden Villa</h3>
+            <div class="location"><span>⌖</span> Golf Course Road, Gurugram</div>
+            <div class="price-row"><div class="price">₹4.25 Cr</div></div>
+            <div class="detail-row"><span>▦ 4 BHK</span><span>⌂ 3,200 sq.ft.</span><span>♧ 4 Baths</span></div>
+            <div class="card-bottom">
+              <small>Garden-facing home</small>
+              <a class="details-link" href="index.html#contact">Enquire ↗</a>
+            </div>
+          </div>
+        </article>
 
-        <div class="no-results" id="noResults">
-          <h3>No matching properties found</h3>
-          <p>Try changing your search or filters.</p>
-        </div>
+        <article class="property-card"
+          data-type="apartment" data-purpose="rent" data-price="65000"
+          data-search="the skyline penthouse apartment saket new delhi">
+          <div class="property-image">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85"
+              alt="Bright premium apartment interior">
+            <span class="tag">FOR RENT</span>
+            <button class="heart" type="button" aria-label="Save The Skyline Penthouse">♡</button>
+          </div>
+          <div class="property-content">
+            <div class="property-type">Premium Apartment · For Rent</div>
+            <h3>The Skyline Penthouse</h3>
+            <div class="location"><span>⌖</span> Saket, New Delhi</div>
+            <div class="price-row"><div class="price">₹65,000 <small>/ month</small></div></div>
+            <div class="detail-row"><span>▦ 3 BHK</span><span>⌂ 1,600 sq.ft.</span><span>♧ 3 Baths</span></div>
+            <div class="card-bottom">
+              <small>Move-in ready</small>
+              <a class="details-link" href="index.html#contact">Enquire ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card"
+          data-type="house" data-purpose="buy" data-price="12500000"
+          data-search="olive courtyard independent house indirapuram ghaziabad">
+          <div class="property-image">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1000&q=85"
+              alt="Modern independent family home">
+            <span class="tag">NEW LISTING</span>
+            <button class="heart" type="button" aria-label="Save Olive Courtyard">♡</button>
+          </div>
+          <div class="property-content">
+            <div class="property-type">Independent House · For Sale</div>
+            <h3>Olive Courtyard</h3>
+            <div class="location"><span>⌖</span> Indirapuram, Ghaziabad</div>
+            <div class="price-row"><div class="price">₹1.25 Cr</div></div>
+            <div class="detail-row"><span>▦ 3 BHK</span><span>⌂ 1,450 sq.ft.</span><span>♧ 3 Baths</span></div>
+            <div class="card-bottom">
+              <small>Family-friendly area</small>
+              <a class="details-link" href="index.html#contact">Enquire ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card"
+          data-type="commercial" data-purpose="rent" data-price="120000"
+          data-search="the work loft commercial office noida sector 62">
+          <div class="property-image">
+            <img loading="lazy"
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
+              alt="Modern commercial office space">
+            <span class="tag">COMMERCIAL</span>
+            <button class="heart" type="button" aria-label="Save The Work Loft">♡</button>
+          </div>
+          <div class="property-content">
+            <div class="property-type">Office Space · For Rent</div>
+            <h3>The Work Loft</h3>
+            <div class="location"><span>⌖</span> Sector 62, Noida</div>
+            <div class="price-row"><div class="price">₹1.2 Lakh <small>/ month</small></div></div>
+            <div class="detail-row"><span>▦ Office</span><span>⌂ 2,100 sq.ft.</span><span>♧ 2 Cabins</span></div>
+            <div class="card-bottom">
+              <small>Business-ready space</small>
+              <a class="details-link" href="index.html#contact">Enquire ↗</a>
+            </div>
+          </div>
+        </article>
+
       </div>
-    </section>
 
-    <section class="cta">
-      <div class="container cta-inner">
-        <div>
-          <div class="eyebrow">Your next chapter starts here</div>
-          <h2>Haven't found the right place yet?</h2>
-          <p>Tell us what you need. We'll help you explore suitable options.</p>
-        </div>
-        <div class="cta-actions">
-          <a class="primary-btn" href="index.html#contact">Talk to an Advisor ↗</a>
-          <a class="outline-btn" href="index.html#contact">List Your Property</a>
-        </div>
+      <div class="no-results" id="noResults">
+        <h3>No matching properties found</h3>
+        <p>Try changing your search or filters.</p>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    <div class="container">
-      <div class="footer-top">
-        <div>
-          <a class="brand" style="color:white" href="index.html">
-            <span class="brand-icon">E</span>
-            <span>EstateAura<small>REAL ESTATE, REIMAGINED</small></span>
-          </a>
-          <p class="footer-description">
-            A thoughtful way to discover your next home, investment or workspace.
-          </p>
-        </div>
+  <section class="cta">
+    <div class="container cta-inner">
+      <div>
+        <div class="eyebrow">Your next chapter starts here</div>
+        <h2>Haven't found the right place yet?</h2>
+        <p>Tell us what you need. We'll help you explore suitable options.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="primary-btn" href="index.html#contact">Talk to an Advisor ↗</a>
+        <a class="outline-btn" href="index.html#contact">List Your Property</a>
+      </div>
+    </div>
+  </section>
+</main>
 
-        <div class="footer-links">
-          <h4>Explore</h4>
-          <a href="index.html">Home</a>
-          <a href="about.html">About EstateAura</a>
-          <a href="properties.html">Properties</a>
-        </div>
+ <footer class="footer">
+    <div class="footer-grid">
 
-        <div class="footer-links">
-          <h4>Get in touch</h4>
-          <a href="index.html#contact">Contact our team</a>
-          <a href="index.html#services">Our services</a>
-          <a href="mailto:hello@estateaura.com">hello@estateaura.com</a>
-        </div>
+      <div class="footer-brand">
+        <a href="index.html" aria-label="EstateAura Home">
+          <img src="logo.png" alt="EstateAura">
+        </a>
+
+        <p>
+          Thoughtful property choices. Personal guidance.
+          A better way to explore your next place.
+        </p>
       </div>
 
-      <div class="footer-bottom">
-        <span>© <span id="year"></span> EstateAura. All rights reserved.</span>
-        <span>Designed for better living.</span>
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="properties.html">Properties</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Discover</h3>
+        <a href="services.html">Our Services</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Let's Connect</h3>
+        <p>
+          Have a question or a property goal in mind?
+          We'd be happy to hear from you.
+        </p>
+        <a href="contact.html" class="footer-button">
+          Get in Touch <span>↗</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> EstateAura. All rights reserved.</p>
+
+      <div class="footer-bottom-links">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
 
-  <!-- Replace this demo WhatsApp number with your own -->
-  <a class="whatsapp" href="https://wa.me/919876543210"
-     target="_blank" rel="noopener" aria-label="Chat on WhatsApp">◔</a>
+<a class="whatsapp" href="https://wa.me/919876543210"
+   target="_blank" rel="noopener" aria-label="Chat on WhatsApp">◔</a>
 
-  <script>
-    const cards = [...document.querySelectorAll('.property-card')];
-    const searchText = document.getElementById('searchText');
-    const typeSelect = document.getElementById('typeSelect');
-    const budgetSelect = document.getElementById('budgetSelect');
-    const purposeSelect = document.getElementById('purposeSelect');
-    const count = document.getElementById('resultsCount');
-    const noResults = document.getElementById('noResults');
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = [...document.querySelectorAll(".property-card")];
+  const count = document.getElementById("resultsCount");
+  const noResults = document.getElementById("noResults");
+  const params = new URLSearchParams(window.location.search);
 
-    let quickFilter = 'all';
+  let quickFilter = "all";
 
-    function filterProperties() {
-      const query = searchText.value.trim().toLowerCase();
-      const type = typeSelect.value;
-      const budget = budgetSelect.value;
-      const purpose = purposeSelect.value;
-      let visible = 0;
+  // Read search selections sent from index.html.
+  const queryParam = (params.get("searchText") || "").trim();
+  const purposeParam = (
+    params.get("purposeSelect") || params.get("mode") || "all"
+  ).toLowerCase();
+  const typeParam = (params.get("typeSelect") || "all").toLowerCase();
+  const budgetParam = params.get("budgetSelect") || "all";
 
-      cards.forEach(card => {
-        const matchesQuery =
-          (card.dataset.search + ' ' + card.textContent).toLowerCase().includes(query);
+  // Homepage uses "all" for Buy/Sell; Sell means property sale listings.
+  let selectedPurpose = "all";
 
-        const matchesType =
-          type === 'all' || card.dataset.type === type;
+  if (purposeParam === "rent") selectedPurpose = "rent";
+  else if (purposeParam === "buy" || purposeParam === "sell") selectedPurpose = "buy";
 
-        const matchesPurpose =
-          purpose === 'all' || card.dataset.purpose === purpose;
+  // Handle both old and new homepage query values.
+  let selectedType = typeParam;
+  if (selectedType === "all properties" || selectedType === "") selectedType = "all";
+  if (selectedType.includes("apartment")) selectedType = "apartment";
+  if (selectedType.includes("villa")) selectedType = "villa";
+  if (selectedType.includes("commercial")) selectedType = "commercial";
+  if (selectedType.includes("house")) selectedType = "house";
 
-        const matchesQuick =
-          quickFilter === 'all' ||
-          card.dataset.purpose === quickFilter ||
-          card.dataset.type === quickFilter;
+  function normalise(value) {
+    return (value || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9₹ ]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
 
-        const matchesBudget =
-          budget === 'all' || Number(card.dataset.price) <= Number(budget);
+  function filterProperties() {
+    const query = normalise(queryParam);
+    const budget = budgetParam === "all" ? "all" : Number(budgetParam);
+    let visible = 0;
 
-        const show = matchesQuery && matchesType &&
-          matchesPurpose && matchesQuick && matchesBudget;
+    cards.forEach(card => {
+      const searchableText = normalise(
+        (card.dataset.search || "") + " " + card.textContent
+      );
 
-        card.style.display = show ? '' : 'none';
-        if (show) visible++;
+      const cardType = (card.dataset.type || "").toLowerCase();
+      const cardPurpose = (card.dataset.purpose || "").toLowerCase();
+      const price = Number(card.dataset.price || 0);
+
+      // Match full text or individual search words, e.g. "Noida villa".
+      const words = query.split(" ").filter(Boolean);
+      const matchesLocation = !query || words.every(word => searchableText.includes(word));
+
+      const matchesType =
+        selectedType === "all" || cardType === selectedType;
+
+      const matchesPurpose =
+        selectedPurpose === "all" || cardPurpose === selectedPurpose;
+
+      const matchesQuick =
+        quickFilter === "all" ||
+        cardPurpose === quickFilter ||
+        cardType === quickFilter;
+
+      const matchesBudget =
+        budget === "all" || (Number.isFinite(budget) && price <= budget);
+
+      const show =
+        matchesLocation &&
+        matchesType &&
+        matchesPurpose &&
+        matchesQuick &&
+        matchesBudget;
+
+      card.style.display = show ? "" : "none";
+      if (show) visible++;
+    });
+
+    count.textContent =
+      `Showing ${visible} ${visible === 1 ? "property" : "properties"}`;
+
+    noResults.style.display = visible === 0 ? "block" : "none";
+  }
+
+  document.querySelectorAll(".filter-chip").forEach(button => {
+    button.addEventListener("click", function () {
+      document.querySelectorAll(".filter-chip").forEach(item => {
+        item.classList.remove("active");
       });
 
-      count.textContent =
-        `Showing ${visible} ${visible === 1 ? 'property' : 'properties'}`;
-
-      noResults.style.display = visible ? 'none' : 'block';
-    }
-
-    document.getElementById('searchForm').addEventListener('submit', event => {
-      event.preventDefault();
+      button.classList.add("active");
+      quickFilter = button.dataset.filter || "all";
       filterProperties();
     });
+  });
 
-    [searchText, typeSelect, budgetSelect, purposeSelect].forEach(element => {
-      element.addEventListener(
-        element === searchText ? 'input' : 'change',
-        filterProperties
-      );
+  document.querySelectorAll(".heart").forEach(button => {
+    button.addEventListener("click", function () {
+      button.classList.toggle("saved");
+      button.textContent = button.classList.contains("saved") ? "♥" : "♡";
     });
+  });
 
-    document.querySelectorAll('.filter-chip').forEach(button => {
-      button.addEventListener('click', () => {
-        document.querySelectorAll('.filter-chip').forEach(item =>
-          item.classList.remove('active')
-        );
+  const menuToggle = document.getElementById("menuToggle");
+  const navlinks = document.getElementById("navlinks");
 
-        button.classList.add('active');
-        quickFilter = button.dataset.filter;
-        filterProperties();
-      });
+  if (menuToggle && navlinks) {
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navlinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
     });
+  }
 
-    document.querySelectorAll('.heart').forEach(button => {
-      button.addEventListener('click', () => {
-        button.classList.toggle('saved');
-        button.textContent = button.classList.contains('saved') ? '♥' : '♡';
-      });
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Apply homepage filters on page load.
+  filterProperties();
+
+  // If homepage search was used, scroll directly to matching listings.
+  if (params.has("searchText") || params.has("purposeSelect") ||
+      params.has("typeSelect") || params.has("budgetSelect") ||
+      params.has("mode")) {
+    document.getElementById("propertyCollection").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
     });
-
-    document.getElementById('menuToggle').addEventListener('click', () => {
-      document.getElementById('navlinks').classList.toggle('open');
-    });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  }
+});
+</script>
 
 </body>
 </html>

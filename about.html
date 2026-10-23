@@ -148,7 +148,7 @@
 
     .hero {
       position: relative;
-      min-height: 590px;
+      min-height: 200px;
       display: flex;
       align-items: center;
       padding: 90px 6%;
@@ -724,7 +724,7 @@
       }
 
       .hero {
-        min-height: 560px;
+        min-height: 423px;
         padding: 75px 6%;
         background-position: 60% center;
       }
@@ -837,6 +837,150 @@
         grid-column: auto;
       }
     }
+    /* =========================================
+   ESTATEAURA ABOUT PAGE
+   DESKTOP SECTION GAP CORRECTION
+========================================= */
+
+@media (min-width: 721px) {
+
+  /* About, Mission, Values and Journey */
+  .intro,
+  .purpose,
+  .values,
+  .journey {
+    padding-top: 52px !important;
+    padding-bottom: 52px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* About section image and content */
+  .intro-grid {
+    gap: 50px;
+  }
+
+  .intro-image img {
+    height: 430px;
+  }
+
+  .intro-copy h2 {
+    margin-bottom: 15px;
+  }
+
+  .intro-copy > p:not(.eyebrow) {
+    margin-bottom: 12px;
+    line-height: 1.8;
+  }
+
+  .check-list {
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 22px;
+  }
+
+  /* Mission and Vision */
+  .section-heading {
+    margin-bottom: 28px !important;
+  }
+
+  .purpose-card {
+    min-height: 225px;
+    padding: 28px;
+  }
+
+  .purpose-symbol {
+    margin-bottom: 16px;
+  }
+
+  .purpose-card h3 {
+    margin-bottom: 10px;
+  }
+
+  /* Values cards */
+  .values-grid {
+    gap: 20px;
+  }
+
+  .value-card {
+    padding: 24px;
+  }
+
+  .value-icon {
+    margin-bottom: 15px;
+  }
+
+  .value-card h3 {
+    margin-bottom: 9px;
+  }
+
+  /* Customer journey */
+  .journey-grid {
+    gap: 28px;
+  }
+
+  .journey-card {
+    padding-top: 17px;
+  }
+
+  .journey-card h3 {
+    margin: 11px 0 8px;
+  }
+
+  /* Final CTA */
+  .cta {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+
+  .cta-inner {
+    gap: 28px;
+  }
+
+}
+
+/* Smaller laptop screens */
+@media (min-width: 721px) and (max-width: 1000px) {
+
+  .intro,
+  .purpose,
+  .values,
+  .journey {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .intro-grid {
+    gap: 28px;
+  }
+
+  .intro-image img {
+    height: 380px;
+  }
+
+  .intro-copy > p:not(.eyebrow) {
+    font-size: 13px;
+  }
+
+  .purpose-card {
+    padding: 22px;
+  }
+
+  .values-grid {
+    gap: 14px;
+  }
+
+  .value-card {
+    padding: 19px;
+  }
+
+  .cta {
+    padding: 40px 5% !important;
+  }
+
+}
+
+/* Keep existing mobile spacing unchanged */
   </style>
 </head>
 
@@ -858,7 +1002,7 @@
 
     <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
-      <a href="about.html" class="active">About Us</a>
+      <a href="about.html" class="active">About</a>
       <a href="properties.html">Properties</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
@@ -1182,8 +1326,10 @@
       <div class="footer-column">
         <h3>Explore</h3>
         <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
+        <a href="about.html">About</a>
         <a href="properties.html">Properties</a>
+        <a href="services.html">Services</a>
+        <a href="contect.html">Contact</a>
       </div>
 
       <div class="footer-column">
