@@ -2906,3 +2906,157 @@ section h2 {
   }
 }
 ```
+```css
+/* ===== INDEX NAVBAR - MATCH ABOUT.HTML ===== */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 3px 15px rgba(16, 45, 38, 0.04);
+}
+
+.header .nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.header .brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header .brand-logo {
+  display: block;
+  width: 225px;
+  height: 58px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.header .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 28px;
+}
+
+.header .nav-links a {
+  position: relative;
+  padding: 0;
+  color: #455249;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.header .nav-links a:hover,
+.header .nav-links a.active {
+  color: var(--gold);
+}
+
+.header .nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+  width: 100%;
+  height: 2px;
+  background: var(--gold);
+}
+
+.header .nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.header .menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--green);
+  background: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .header .nav {
+    gap: 15px;
+  }
+
+  .header .brand-logo {
+    width: 195px;
+  }
+
+  .header .nav-links {
+    gap: 19px;
+  }
+}
+
+@media (max-width: 760px) {
+  .header .nav {
+    position: relative;
+    min-height: 70px;
+    gap: 12px;
+  }
+
+  .header .brand-logo {
+    width: 180px;
+    height: 50px;
+  }
+
+  .header .menu-toggle {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .header .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 12px 5% 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: #fff;
+    border-top: 1px solid var(--border);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .header .nav-links.open {
+    display: flex;
+  }
+
+  .header .nav-links a {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0ec;
+  }
+
+  .header .nav-links a.active::after {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .header .brand-logo {
+    width: 165px;
+    height: 46px;
+  }
+}
+```

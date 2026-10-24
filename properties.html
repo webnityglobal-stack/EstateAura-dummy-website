@@ -801,9 +801,7 @@
         Explore thoughtfully selected homes, premium apartments,
         private villas and commercial spaces designed around your lifestyle.
       </p>
-      <div class="breadcrumb">
-        <a href="index.html">Home</a> &nbsp; / &nbsp; Properties
-      </div>
+     
     </div>
   </section>
 
@@ -1024,6 +1022,8 @@
 <a class="whatsapp" href="https://wa.me/919876543210"
    target="_blank" rel="noopener" aria-label="Chat on WhatsApp">◔</a>
 
+
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const cards = [...document.querySelectorAll(".property-card")];
@@ -1031,131 +1031,192 @@ document.addEventListener("DOMContentLoaded", function () {
   const noResults = document.getElementById("noResults");
   const params = new URLSearchParams(window.location.search);
 
-  let quickFilter = "all";
+  const menuToggle = document.getElementById("menuToggle");
+  const navlinks = document.getElementById("navlinks");
+  const year = document.getElementById("year");
 
-  // Read search selections sent from index.html.
-  const queryParam = (params.get("searchText") || "").trim();
+  // Homepage se received search values
+  const query = (params.get("searchText") || "").trim();
+
   const purposeParam = (
-    params.get("purposeSelect") || params.get("mode") || "all"
+    params.get("purposeSelect") ||
+    params.get("mode") ||
+    "all"
   ).toLowerCase();
-  const typeParam = (params.get("typeSelect") || "all").toLowerCase();
-  const budgetParam = params.get("budgetSelect") || "all";
 
-  // Homepage uses "all" for Buy/Sell; Sell means property sale listings.
   let selectedPurpose = "all";
 
-  if (purposeParam === "rent") selectedPurpose = "rent";
-  else if (purposeParam === "buy" || purposeParam === "sell") selectedPurpose = "buy";
+  if (purposeParam === "buy" || purposeParam === "sell") {
+    selectedPurpose = "buy";
+  } else if (purposeParam === "rent") {
+    selectedPurpose = "rent";
+  }
 
-  // Handle both old and new homepage query values.
-  let selectedType = typeParam;
-  if (selectedType === "all properties" || selectedType === "") selectedType = "all";
-  if (selectedType.includes("apartment")) selectedType = "apartment";
-  if (selectedType.includes("villa")) selectedType = "villa";
-  if (selectedType.includes("commercial")) selectedType = "commercial";
-  if (selectedType.includes("house")) selectedType = "house";
+  let selectedType = (params.get("typeSelect") || "all").toLowerCase();
+  let selectedBudget = params.get("budgetSelect") || "all";
 
-  function normalise(value) {
-    return (value || "")
+  // Homepage ke property type ko card ke data-type se match karo
+  function normaliseType(type) {
+    type = (type || "all").toLowerCase().trim();
+
+    if (
+      type === "all properties" ||
+      type === "all rental properties" ||
+      type === "all"
+    ) {
+      return "all";
+    }
+
+    if (type.includes("apartment")) return "apartment";
+    if (type.includes("villa")) return "villa";
+    if (type.includes("house")) return "house";
+    if (type.includes("commercial") || type.includes("office")) {
+      return "commercial";
+    }
+
+    return type;
+  }
+
+  selectedType = normaliseType(selectedType);
+
+  function normalise(text) {
+    return (text || "")
       .toLowerCase()
       .replace(/[^a-z0-9₹ ]/g, " ")
       .replace(/\s+/g, " ")
       .trim();
   }
 
+  // Homepage se aaye filters ke saath current page filter
+  let quickFilter = "all";
+
   function filterProperties() {
-    const query = normalise(queryParam);
-    const budget = budgetParam === "all" ? "all" : Number(budgetParam);
     let visible = 0;
 
-    cards.forEach(card => {
+    const searchWords = normalise(query)
+      .split(" ")
+      .filter(Boolean);
+
+    const budget =
+      selectedBudget === "all" ? null : Number(selectedBudget);
+
+    cards.forEach(function (card) {
+      const cardType = (card.dataset.type || "").toLowerCase();
+      const cardPurpose = (card.dataset.purpose || "").toLowerCase();
+      const cardPrice = Number(card.dataset.price || 0);
+
       const searchableText = normalise(
         (card.dataset.search || "") + " " + card.textContent
       );
 
-      const cardType = (card.dataset.type || "").toLowerCase();
-      const cardPurpose = (card.dataset.purpose || "").toLowerCase();
-      const price = Number(card.dataset.price || 0);
+      const matchesLocation = searchWords.every(function (word) {
+        return searchableText.includes(word);
+      });
 
-      // Match full text or individual search words, e.g. "Noida villa".
-      const words = query.split(" ").filter(Boolean);
-      const matchesLocation = !query || words.every(word => searchableText.includes(word));
+      // Current chip can change the property type or purpose filter
+      let purposeFilter = selectedPurpose;
+      let typeFilter = selectedType;
 
-      const matchesType =
-        selectedType === "all" || cardType === selectedType;
+      if (quickFilter === "buy" || quickFilter === "rent") {
+        purposeFilter = quickFilter;
+      } else if (quickFilter !== "all") {
+        typeFilter = quickFilter;
+      }
 
       const matchesPurpose =
-        selectedPurpose === "all" || cardPurpose === selectedPurpose;
+        purposeFilter === "all" || cardPurpose === purposeFilter;
 
-      const matchesQuick =
-        quickFilter === "all" ||
-        cardPurpose === quickFilter ||
-        cardType === quickFilter;
+      const matchesType =
+        typeFilter === "all" || cardType === typeFilter;
 
       const matchesBudget =
-        budget === "all" || (Number.isFinite(budget) && price <= budget);
+        budget === null ||
+        (Number.isFinite(budget) && cardPrice <= budget);
 
       const show =
         matchesLocation &&
-        matchesType &&
         matchesPurpose &&
-        matchesQuick &&
+        matchesType &&
         matchesBudget;
 
       card.style.display = show ? "" : "none";
+
       if (show) visible++;
     });
 
-    count.textContent =
-      `Showing ${visible} ${visible === 1 ? "property" : "properties"}`;
+    if (count) {
+      count.textContent =
+        `Showing ${visible} ${visible === 1 ? "property" : "properties"}`;
+    }
 
-    noResults.style.display = visible === 0 ? "block" : "none";
+    if (noResults) {
+      noResults.style.display = visible === 0 ? "block" : "none";
+    }
   }
 
-  document.querySelectorAll(".filter-chip").forEach(button => {
+  // Properties page filter chips
+  document.querySelectorAll(".filter-chip").forEach(function (button) {
     button.addEventListener("click", function () {
-      document.querySelectorAll(".filter-chip").forEach(item => {
-        item.classList.remove("active");
+      document.querySelectorAll(".filter-chip").forEach(function (chip) {
+        chip.classList.remove("active");
       });
 
       button.classList.add("active");
-      quickFilter = button.dataset.filter || "all";
+      quickFilter = (button.dataset.filter || "all").toLowerCase();
+
       filterProperties();
     });
   });
 
-  document.querySelectorAll(".heart").forEach(button => {
+  // Favourite buttons
+  document.querySelectorAll(".heart").forEach(function (button) {
     button.addEventListener("click", function () {
-      button.classList.toggle("saved");
-      button.textContent = button.classList.contains("saved") ? "♥" : "♡";
+      const saved = button.classList.toggle("saved");
+      button.textContent = saved ? "♥" : "♡";
+      button.setAttribute("aria-pressed", String(saved));
     });
   });
 
-  const menuToggle = document.getElementById("menuToggle");
-  const navlinks = document.getElementById("navlinks");
-
+  // Mobile navigation
   if (menuToggle && navlinks) {
     menuToggle.addEventListener("click", function () {
       const isOpen = navlinks.classList.toggle("open");
+
       menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "✕" : "☰";
     });
   }
 
-  document.getElementById("year").textContent = new Date().getFullYear();
+  // Copyright year
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
 
-  // Apply homepage filters on page load.
+  // Apply homepage search on page load
   filterProperties();
 
-  // If homepage search was used, scroll directly to matching listings.
-  if (params.has("searchText") || params.has("purposeSelect") ||
-      params.has("typeSelect") || params.has("budgetSelect") ||
-      params.has("mode")) {
-    document.getElementById("propertyCollection").scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
+  // Scroll to the listings when arriving from homepage search
+  const hasSearch =
+    params.has("searchText") ||
+    params.has("purposeSelect") ||
+    params.has("typeSelect") ||
+    params.has("budgetSelect") ||
+    params.has("mode");
+
+  if (hasSearch) {
+    const collection = document.getElementById("propertyCollection");
+
+    if (collection) {
+      setTimeout(function () {
+        collection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }, 150);
+    }
   }
 });
+
 </script>
 
 </body>
