@@ -2084,16 +2084,25 @@
       </div>
     </div>
   </footer>
-  <script>
-    // Update copyright year
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+  
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Copyright year
+  const year = document.getElementById("year");
 
-    // Mobile navigation
-    const menuToggle = document.getElementById("menuToggle");
-    const navMenu = document.getElementById("navMenu");
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
 
-    menuToggle.addEventListener("click", function () {
+  // Mobile navigation
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
       const isOpen = navMenu.classList.toggle("open");
 
       menuToggle.setAttribute("aria-expanded", String(isOpen));
@@ -2105,7 +2114,7 @@
       menuToggle.textContent = isOpen ? "✕" : "☰";
     });
 
-    // Close mobile menu when a link is clicked
+    // Close menu after clicking a navigation link
     navMenu.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         navMenu.classList.remove("open");
@@ -2115,17 +2124,39 @@
       });
     });
 
-    // Back to top
-    document.getElementById("backTop").addEventListener("click", function (event) {
+    // Close menu when clicking outside
+    document.addEventListener("click", function (event) {
+      if (
+        !menuToggle.contains(event.target) &&
+        !navMenu.contains(event.target)
+      ) {
+        navMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      }
+    });
+  }
+
+  // Back to top — safely check if the button exists
+  const backTop = document.getElementById("backTop");
+
+  if (backTop) {
+    backTop.addEventListener("click", function (event) {
       event.preventDefault();
+
       window.scrollTo({
         top: 0,
         behavior: "smooth"
       });
     });
+  }
+});
+</script>
+
     /* ===== ESTATEAURA SERVICES PAGE — REDUCE EXTRA SPACING ===== */
 /* ===== ESTATEAURA SERVICES PAGE — REDUCE EXTRA SPACING ===== */
-
+<style>
 @media (min-width: 761px) {
 
   /* Hero section */
@@ -2332,6 +2363,6 @@
     padding: 45px 0;
   }
 }
-</script>
+</style>
 </body>
 </html>

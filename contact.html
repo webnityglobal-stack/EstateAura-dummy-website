@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0b3025" />
-  <meta name="description" content="Contact EstateAura for luxury homes, property buying, selling, rentals and real estate investment guidance." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b3025">
+  <meta name="description" content="Contact EstateAura for property buying, selling, rentals and real estate investment guidance.">
   <title>Contact Us | EstateAura</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,9 +22,8 @@
       --cream: #f7f4ed;
       --text: #24332e;
       --muted: #697771;
-      --white: #fff;
       --border: #e9e6df;
-      --shadow: 0 12px 35px rgba(11, 48, 37, 0.07);
+      --shadow: 0 12px 35px rgba(11, 48, 37, .07);
     }
 
     * {
@@ -54,10 +53,6 @@
       font: inherit;
     }
 
-    button, a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
     img {
       display: block;
       max-width: 100%;
@@ -65,34 +60,34 @@
 
     .container {
       width: min(1180px, 90%);
-      margin: auto;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3 {
+      font-family: "Playfair Display", serif;
+      line-height: 1.2;
+      font-weight: 600;
     }
 
     .section-label {
       display: inline-block;
+      margin-bottom: 12px;
       color: var(--gold);
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      margin-bottom: 12px;
     }
 
-    h1, h2, h3 {
-      font-family: "Playfair Display", serif;
-      line-height: 1.16;
-      font-weight: 600;
-    }
-
-    /* NAVBAR */
+    /* HEADER */
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.98);
-      border-bottom: 1px solid rgba(11, 48, 37, 0.08);
-      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.025);
+      background: rgba(255,255,255,.98);
+      border-bottom: 1px solid rgba(11,48,37,.08);
+      box-shadow: 0 3px 15px rgba(0,0,0,.025);
     }
 
     .navbar {
@@ -124,13 +119,13 @@
     }
 
     .nav-links a {
-      display: inline-block;
       position: relative;
+      display: inline-block;
       padding: 9px 0;
       color: #25362f;
       font-size: 14px;
       font-weight: 500;
-      transition: color 0.25s ease;
+      transition: color .25s ease;
     }
 
     .nav-links a:hover,
@@ -154,7 +149,7 @@
       height: 43px;
       border: 1px solid var(--border);
       border-radius: 5px;
-      background: white;
+      background: #fff;
       color: var(--green);
       cursor: pointer;
       font-size: 20px;
@@ -164,7 +159,6 @@
 
     .contact-hero {
       min-height: 450px;
-      position: relative;
       display: flex;
       align-items: center;
       overflow: hidden;
@@ -172,10 +166,10 @@
       background-image:
         linear-gradient(
           90deg,
-          rgba(5, 35, 26, 0.94) 0%,
-          rgba(5, 35, 26, 0.78) 37%,
-          rgba(5, 35, 26, 0.30) 68%,
-          rgba(5, 35, 26, 0.06) 100%
+          rgba(5,35,26,.94) 0%,
+          rgba(5,35,26,.78) 37%,
+          rgba(5,35,26,.30) 68%,
+          rgba(5,35,26,.06) 100%
         ),
         url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2200&q=90");
       background-position: center, center 53%;
@@ -184,11 +178,8 @@
     }
 
     .hero-content {
-      position: relative;
-      z-index: 1;
-      padding-top: 65px;
-      padding-bottom: 65px;
-      color: white;
+      padding: 65px 0;
+      color: #fff;
     }
 
     .hero-eyebrow {
@@ -205,7 +196,6 @@
 
     .hero-eyebrow::before {
       content: "";
-      display: inline-block;
       width: 45px;
       height: 2px;
       background: var(--gold);
@@ -225,41 +215,9 @@
 
     .hero-content > p {
       max-width: 510px;
-      color: rgba(255, 255, 255, 0.88);
+      color: rgba(255,255,255,.88);
       font-size: 15px;
       line-height: 1.8;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 11px;
-      min-height: 48px;
-      padding: 13px 23px;
-      border: 1px solid transparent;
-      border-radius: 2px;
-      cursor: pointer;
-      font-size: 13px;
-      font-weight: 700;
-      transition: transform 0.25s ease, background 0.25s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-gold {
-      background: var(--gold);
-      color: white;
-    }
-
-    .btn-gold:hover {
-      background: #b7833d;
-    }
-
-    .hero-content .btn {
-      margin-top: 25px;
     }
 
     .hero-highlights {
@@ -268,7 +226,7 @@
       flex-wrap: wrap;
       gap: 14px;
       margin-top: 26px;
-      color: white;
+      color: #fff;
       font-size: 12px;
     }
 
@@ -286,7 +244,37 @@
     .hero-highlights .separator {
       width: 1px;
       height: 19px;
-      background: rgba(255, 255, 255, 0.28);
+      background: rgba(255,255,255,.28);
+    }
+
+    /* BUTTONS */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      min-height: 48px;
+      padding: 13px 23px;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform .25s ease, background .25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #fff;
+    }
+
+    .btn-gold:hover {
+      background: #b7833d;
     }
 
     /* CONTACT SECTION */
@@ -297,7 +285,7 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: 0.82fr 1.18fr;
+      grid-template-columns: .82fr 1.18fr;
       gap: 48px;
       align-items: start;
     }
@@ -338,7 +326,7 @@
       padding: 17px;
       border: 1px solid var(--border);
       border-radius: 4px;
-      transition: box-shadow 0.25s ease, transform 0.25s ease;
+      transition: box-shadow .25s ease, transform .25s ease;
     }
 
     .contact-detail:hover {
@@ -377,14 +365,14 @@
       color: var(--gold);
     }
 
-    /* FORM */
+    /* CONTACT FORM */
 
     .contact-form-card {
       padding: 31px;
       border: 1px solid #eeece7;
       border-radius: 3px;
       box-shadow: var(--shadow);
-      background: white;
+      background: #fff;
     }
 
     .contact-form-card h2 {
@@ -438,14 +426,14 @@
       color: var(--text);
       background: #fff;
       font-size: 13px;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      transition: border-color .2s ease, box-shadow .2s ease;
     }
 
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
       border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(201, 154, 85, 0.12);
+      box-shadow: 0 0 0 3px rgba(201,154,85,.12);
     }
 
     .form-group textarea {
@@ -462,16 +450,13 @@
       margin-top: 10px;
       color: #808780;
       font-size: 11px;
-      line-height: 1.6;
     }
 
-    /* CTA STRIP */
+    /* CTA */
 
     .cta-strip {
-      padding: 35px 0;
-      background:
-        radial-gradient(ellipse at 100% 0%, rgba(201, 154, 85, 0.13), transparent 45%),
-        var(--cream);
+      padding: 42px 0;
+      background: var(--cream);
     }
 
     .cta-inner {
@@ -482,9 +467,9 @@
     }
 
     .cta-inner h2 {
-      margin-bottom: 7px;
+      margin-bottom: 9px;
       color: var(--green);
-      font-size: clamp(27px, 3.2vw, 37px);
+      font-size: clamp(27px, 3vw, 38px);
     }
 
     .cta-inner p {
@@ -492,72 +477,44 @@
       font-size: 14px;
     }
 
-    .btn-green {
-      flex-shrink: 0;
-      background: var(--green);
-      color: white;
-    }
-
-    .btn-green:hover {
-      background: var(--green-light);
-    }
-
-    /* FOOTER */
+    /* FOOTER - MATCHING PROPERTIES PAGE */
 
     .site-footer {
+      display: block;
+      width: 100%;
       padding: 43px 0 0;
-      background: var(--green);
-      color: white;
+      background: #0b3025;
+      color: #fff;
     }
 
-    .footer-grid {
+    .site-footer .footer-grid {
       display: grid;
-      grid-template-columns: 1.25fr 0.7fr 0.9fr 1.05fr;
+      grid-template-columns: 1.25fr .7fr .9fr 1.05fr;
       gap: 36px;
       padding-bottom: 30px;
     }
 
-    .footer-logo {
+    .site-footer .footer-logo {
+      display: block;
       width: 185px;
       height: 53px;
+      margin-bottom: 10px;
       object-fit: contain;
       object-position: left center;
-      margin-bottom: 10px;
+      background: #fff;
+      border-radius: 2px;
     }
 
-    .footer-about > p {
+    .site-footer .footer-about > p {
       max-width: 270px;
-      color: rgba(255, 255, 255, 0.72);
+      color: rgba(255,255,255,.72);
       font-size: 13px;
       line-height: 1.8;
     }
 
-    .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 16px;
-    }
-
-    .social-links a {
-      width: 31px;
-      height: 31px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.12);
-      color: white;
-      font-size: 13px;
-      transition: background 0.2s ease;
-    }
-
-    .social-links a:hover {
-      background: var(--gold);
-    }
-
-    .footer-column h3 {
+    .site-footer .footer-column h3 {
       margin: 5px 0 16px;
-      color: var(--gold-light);
+      color: #e4c18b;
       font-family: "DM Sans", sans-serif;
       font-size: 11px;
       font-weight: 700;
@@ -565,80 +522,89 @@
       text-transform: uppercase;
     }
 
-    .footer-column ul {
+    .site-footer .footer-column ul {
       display: grid;
       gap: 8px;
+      padding: 0;
       list-style: none;
     }
 
-    .footer-column li,
-    .footer-column a,
-    .footer-column p {
-      color: rgba(255, 255, 255, 0.75);
+    .site-footer .footer-column a,
+    .site-footer .footer-column p {
+      color: rgba(255,255,255,.78);
       font-size: 12px;
-      line-height: 1.7;
+      line-height: 1.8;
+      overflow-wrap: anywhere;
     }
 
-    .footer-column a:hover {
-      color: var(--gold-light);
+    .site-footer .footer-column a {
+      transition: color .2s ease;
     }
 
-    .footer-contact-item {
+    .site-footer .footer-column a:hover {
+      color: #e4c18b;
+    }
+
+    .site-footer .footer-contact-item {
       display: flex;
-      align-items: flex-start;
-      gap: 11px;
+      align-items: center;
+      gap: 10px;
       margin-bottom: 12px;
     }
 
-    .footer-contact-item i {
-      margin-top: 4px;
-      color: var(--gold-light);
+    .site-footer .footer-contact-item i {
+      color: #e4c18b;
     }
 
-    .footer-bottom {
+    .site-footer .footer-contact > p {
+      margin-bottom: 16px;
+    }
+
+    .site-footer .footer-contact .btn {
+      color: #fff;
+    }
+
+    .site-footer .footer-bottom {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 18px;
-      flex-wrap: wrap;
-      padding: 15px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 18px 0;
+      border-top: 1px solid rgba(255,255,255,.15);
     }
 
-    .footer-bottom p,
-    .footer-bottom a {
-      color: rgba(255, 255, 255, 0.72);
+    .site-footer .footer-bottom p,
+    .site-footer .footer-legal a {
+      color: rgba(255,255,255,.65);
       font-size: 11px;
     }
 
-    .footer-legal {
+    .site-footer .footer-legal {
       display: flex;
-      align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;
+      gap: 20px;
     }
 
-    .footer-legal a:hover {
-      color: var(--gold-light);
+    .site-footer .footer-legal a:hover {
+      color: #e4c18b;
     }
 
-    /* WHATSAPP FLOAT BUTTON */
+    /* WHATSAPP BUTTON */
 
     .whatsapp-float {
       position: fixed;
       right: 22px;
       bottom: 22px;
-      z-index: 900;
+      z-index: 999;
       width: 55px;
       height: 55px;
       display: grid;
       place-items: center;
       border-radius: 50%;
-      background: #20c76a;
-      color: white;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-      font-size: 27px;
-      transition: transform 0.25s ease;
+      background: #25d366;
+      color: #fff;
+      font-size: 28px;
+      box-shadow: 0 5px 18px rgba(0,0,0,.2);
+      transition: transform .2s ease;
     }
 
     .whatsapp-float:hover {
@@ -661,7 +627,7 @@
         padding: 24px;
       }
 
-      .footer-grid {
+      .site-footer .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 30px;
       }
@@ -680,6 +646,12 @@
       .menu-toggle {
         display: grid;
         place-items: center;
+        margin-left: auto;
+        flex-shrink: 0;
+      }
+
+      .navbar nav {
+        position: static;
       }
 
       .nav-links {
@@ -689,16 +661,16 @@
         right: 0;
         display: none;
         align-items: stretch;
+        flex-direction: column;
         gap: 0;
         padding: 8px 5% 15px;
-        background: white;
+        background: #fff;
         border-top: 1px solid var(--border);
-        box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 10px 18px rgba(0,0,0,.08);
       }
 
       .nav-links.open {
         display: flex;
-        flex-direction: column;
       }
 
       .nav-links li {
@@ -719,17 +691,12 @@
         min-height: 470px;
         background-position: center, 58% center;
         background-image:
-          linear-gradient(
-            90deg,
-            rgba(5, 35, 26, 0.91),
-            rgba(5, 35, 26, 0.65)
-          ),
+          linear-gradient(90deg, rgba(5,35,26,.91), rgba(5,35,26,.65)),
           url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85");
       }
 
       .hero-content {
-        padding-top: 57px;
-        padding-bottom: 55px;
+        padding: 57px 0 55px;
       }
 
       .hero-content h1 {
@@ -779,7 +746,7 @@
         flex-direction: column;
       }
 
-      .footer-grid {
+      .site-footer .footer-grid {
         gap: 28px 22px;
       }
     }
@@ -812,12 +779,12 @@
         font-size: 42px;
       }
 
-      .footer-grid {
+      .site-footer .footer-grid {
         grid-template-columns: 1fr;
         gap: 24px;
       }
 
-      .footer-bottom {
+      .site-footer .footer-bottom {
         align-items: flex-start;
         flex-direction: column;
       }
@@ -837,542 +804,9 @@
       }
 
       *, *::before, *::after {
-        transition-duration: 0.01ms !important;
+        transition-duration: .01ms !important;
       }
     }
-    ```css
-/* =====================================
-   ESTATEAURA FOOTER
-===================================== */
-
-.footer {
-  background: #122d23;
-  color: #ffffff;
-  padding: 55px 6% 0;
-  font-family: "DM Sans", sans-serif;
-}
-
-.footer-grid {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 42px;
-
-  display: grid;
-  grid-template-columns: 1.5fr 0.8fr 0.9fr 1.2fr;
-  gap: 38px;
-  align-items: start;
-}
-
-/* BRAND */
-
-.footer-brand {
-  min-width: 0;
-}
-
-.footer-brand > a {
-  display: inline-block;
-  margin-bottom: 18px;
-}
-
-.footer-brand img {
-  display: block;
-  width: 175px;
-  height: 58px;
-  padding: 4px;
-  object-fit: contain;
-  object-position: left center;
-  background: #ffffff;
-  border-radius: 4px;
-}
-
-.footer-brand p {
-  max-width: 290px;
-  margin: 0;
-  color: #bdcec2;
-  font-size: 13px;
-  line-height: 1.9;
-}
-
-/* FOOTER COLUMNS */
-
-.footer-column {
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 13px;
-}
-
-.footer-column h3 {
-  margin: 5px 0 9px;
-  color: #dce8cf;
-  font-family: "Manrope", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-.footer-column a {
-  color: #dce6df;
-  font-size: 13px;
-  line-height: 1.6;
-  text-decoration: none;
-  transition: color 0.25s ease,
-              transform 0.25s ease;
-}
-
-.footer-column a:hover {
-  color: #dce8cf;
-  transform: translateX(4px);
-}
-
-/* CONTACT SECTION */
-
-.footer-contact p {
-  max-width: 290px;
-  margin: 0;
-  color: #bdcec2;
-  font-size: 13px;
-  line-height: 1.9;
-}
-
-.footer-column .footer-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-
-  margin-top: 8px;
-  padding: 13px 17px;
-
-  background: #dce8cf;
-  color: #153529;
-  border: 1px solid #dce8cf;
-  border-radius: 3px;
-
-  font-size: 12px;
-  font-weight: 800;
-  transition: all 0.25s ease;
-}
-
-.footer-column .footer-button:hover {
-  background: #ffffff;
-  color: #153529;
-  transform: translateY(-2px);
-}
-
-/* BOTTOM COPYRIGHT BAR */
-
-.footer-bottom {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 21px 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 15px;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-}
-
-.footer-bottom p {
-  margin: 0;
-  color: #bdcec2;
-  font-size: 12px;
-  line-height: 1.7;
-}
-
-.footer-bottom-links {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-}
-
-.footer-bottom-links a {
-  color: #bdcec2;
-  font-size: 12px;
-  text-decoration: none;
-  transition: color 0.25s ease;
-}
-
-.footer-bottom-links a:hover {
-  color: #dce8cf;
-}
-
-/* TABLET */
-
-@media (min-width: 721px) and (max-width: 1000px) {
-  .footer {
-    padding: 45px 5% 0;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 30px 24px;
-  }
-
-  .footer-contact {
-    grid-column: 1 / -1;
-  }
-
-  .footer-contact p {
-    max-width: 420px;
-  }
-}
-
-/* MOBILE */
-
-@media (max-width: 720px) {
-  .footer {
-    padding: 38px 6% 0;
-  }
-
-  .footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px 22px;
-    padding-bottom: 32px;
-  }
-
-  .footer-brand,
-  .footer-contact {
-    grid-column: 1 / -1;
-  }
-
-  .footer-brand img {
-    width: 160px;
-    height: 54px;
-  }
-
-  .footer-brand p,
-  .footer-contact p {
-    max-width: 340px;
-    font-size: 13px;
-  }
-
-  .footer-column {
-    gap: 11px;
-  }
-
-  .footer-column h3 {
-    margin: 3px 0 7px;
-    font-size: 14px;
-  }
-
-  .footer-column a {
-    font-size: 12px;
-  }
-
-  .footer-column .footer-button {
-    margin-top: 5px;
-    padding: 12px 16px;
-  }
-
-  .footer-bottom {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 12px;
-    padding: 18px 0 20px;
-  }
-
-  .footer-bottom-links {
-    gap: 18px;
-  }
-}
-
-/* SMALL MOBILE */
-
-@media (max-width: 380px) {
-  .footer {
-    padding-right: 5%;
-    padding-left: 5%;
-  }
-
-  .footer-grid {
-    column-gap: 15px;
-  }
-
-  .footer-brand img {
-    width: 145px;
-  }
-
-  .footer-column a {
-    font-size: 11px;
-  }
-
-  .footer-bottom p,
-  .footer-bottom-links a {
-    font-size: 11px;
-  }
-}
-```css
-/* ==================================
-   ESTATEAURA FOOTER COLOR FIX
-   Paste at the END of your CSS
-================================== */
-
-footer.footer {
-  background-color: #122d23 !important;
-  background-image: none !important;
-  color: #ffffff !important;
-  padding: 55px 6% 0;
-}
-
-/* Footer layout */
-footer.footer .footer-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.5fr 0.8fr 0.9fr 1.2fr;
-  gap: 38px;
-  align-items: start;
-}
-
-/* Brand description */
-footer.footer .footer-brand p,
-footer.footer .footer-contact p {
-  color: #bdcec2 !important;
-  line-height: 1.9;
-}
-
-/* Column headings */
-footer.footer .footer-column h3 {
-  color: #dce8cf !important;
-  font-size: 15px;
-}
-
-/* All footer links */
-footer.footer .footer-column a,
-footer.footer .footer-bottom-links a {
-  color: #e0e9e2 !important;
-  text-decoration: none;
-  transition: color 0.25s ease;
-}
-
-footer.footer .footer-column a:hover,
-footer.footer .footer-bottom-links a:hover {
-  color: #dce8cf !important;
-}
-
-/* Get in Touch button */
-footer.footer .footer-column a.footer-button {
-  background-color: #dce8cf !important;
-  color: #153529 !important;
-  border: 1px solid #dce8cf;
-  padding: 13px 17px;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-}
-
-footer.footer .footer-column a.footer-button:hover {
-  background-color: #ffffff !important;
-  color: #153529 !important;
-}
-
-/* Copyright bar */
-footer.footer .footer-bottom {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 21px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-footer.footer .footer-bottom p {
-  color: #bdcec2 !important;
-  margin: 0;
-}
-
-footer.footer .footer-bottom-links {
-  display: flex;
-  gap: 22px;
-}
-
-/* Tablet */
-@media (max-width: 1000px) {
-  footer.footer .footer-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 30px 24px;
-  }
-
-  footer.footer .footer-contact {
-    grid-column: 1 / -1;
-  }
-}
-
-/* Mobile */
-@media (max-width: 720px) {
-  footer.footer {
-    padding: 38px 6% 0;
-  }
-
-  footer.footer .footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 28px 20px;
-    padding-bottom: 30px;
-  }
-
-  footer.footer .footer-brand,
-  footer.footer .footer-contact {
-    grid-column: 1 / -1;
-  }
-
-  footer.footer .footer-bottom {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 380px) {
-  footer.footer .footer-grid {
-    column-gap: 14px;
-  }
-}
-```
-``````css
-/* CONTACT.HTML — FOOTER COLOR FIX */
-
-.footer {
-  background: #122d23 !important;
-  color: #512626 !important;
-}
-
-.footer-brand p,
-.footer-contact p {
-  color: #1e3e27 !important;
-}
-
-.footer-column h3 {
-  color: #243511 !important;
-}
-
-.footer-column a {
-  color: #153b1f !important;
-}
-
-.footer-column a:hover {
-  color: #223014 !important;
-}
-
-.footer-column .footer-button {
-  background: #1f8b4f !important;
-  color: #153529 !important;
-}
-
-.footer-column .footer-button:hover {
-  background: #ffffff !important;
-  color: #153529 !important;
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.18) !important;
-}
-
-.footer-bottom p,
-.footer-bottom-links a {
-  color: #1b4728 !important;
-}
-
-.footer-bottom-links a:hover {
-  color: #375a12 !important;
-}
-``````css
-/* ===== CONTACT PAGE FOOTER FIX ===== */
-
-footer.footer {
-  display: block !important;
-  width: 100% !important;
-  background-color: #122d23 !important;
-  background-image: none !important;
-  color: #ffffff !important;
-  padding: 55px 6% 0 !important;
-  opacity: 1 !important;
-}
-
-/* Footer layout */
-footer.footer .footer-grid {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.5fr 0.8fr 0.9fr 1.2fr;
-  gap: 38px;
-}
-
-/* Logo description */
-footer.footer .footer-brand p,
-footer.footer .footer-contact p {
-  color: #bdcec2 !important;
-}
-
-/* Headings */
-footer.footer .footer-column h3 {
-  color: #dce8cf !important;
-}
-
-/* Links */
-footer.footer .footer-column a,
-footer.footer .footer-bottom-links a {
-  color: #e6eee8 !important;
-}
-
-/* Contact button */
-footer.footer .footer-column .footer-button {
-  background-color: #dce8cf !important;
-  color: #153529 !important;
-}
-
-/* Bottom copyright */
-footer.footer .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
-}
-
-footer.footer .footer-bottom p {
-  color: #bdcec2 !important;
-}
-
-/* Tablet */
-@media (max-width: 1000px) {
-  footer.footer .footer-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  footer.footer .footer-contact {
-    grid-column: 1 / -1;
-  }
-}
-
-/* Mobile */
-@media (max-width: 720px) {
-  footer.footer {
-    padding: 38px 6% 0 !important;
-  }
-
-  footer.footer .footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 28px 20px;
-  }
-
-  footer.footer .footer-brand,
-  footer.footer .footer-contact {
-    grid-column: 1 / -1;
-  }
-
-  footer.footer .footer-bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-}
-```
   </style>
 </head>
 
@@ -1391,8 +825,7 @@ footer.footer .footer-bottom p {
         aria-label="Open navigation menu"
         aria-expanded="false"
         aria-controls="navLinks"
-        type="button"
-      >
+        type="button">
         <i class="fa-solid fa-bars"></i>
       </button>
 
@@ -1410,7 +843,7 @@ footer.footer .footer-bottom p {
 
   <main>
 
-    <!-- MODERN LUXURY HERO -->
+    <!-- HERO -->
     <section class="contact-hero">
       <div class="container hero-content">
         <div class="hero-eyebrow">We're here to help</div>
@@ -1426,8 +859,6 @@ footer.footer .footer-bottom p {
           what you have in mind.
         </p>
 
-       
-
         <div class="hero-highlights">
           <span><i class="fa-regular fa-circle-check"></i> Personalised assistance</span>
           <span class="separator"></span>
@@ -1438,7 +869,7 @@ footer.footer .footer-bottom p {
       </div>
     </section>
 
-    <!-- CONTACT DETAILS + FORM -->
+    <!-- CONTACT DETAILS AND FORM -->
     <section class="contact-section" id="contact">
       <div class="container contact-grid">
 
@@ -1512,8 +943,7 @@ footer.footer .footer-bottom p {
                   name="fullName"
                   placeholder="Enter your name"
                   autocomplete="name"
-                  required
-                >
+                  required>
               </div>
 
               <div class="form-group">
@@ -1524,8 +954,7 @@ footer.footer .footer-bottom p {
                   name="email"
                   placeholder="you@example.com"
                   autocomplete="email"
-                  required
-                >
+                  required>
               </div>
 
               <div class="form-group">
@@ -1537,8 +966,7 @@ footer.footer .footer-bottom p {
                   placeholder="Your phone number"
                   autocomplete="tel"
                   inputmode="tel"
-                  required
-                >
+                  required>
               </div>
 
               <div class="form-group">
@@ -1574,8 +1002,7 @@ footer.footer .footer-bottom p {
                   id="message"
                   name="message"
                   placeholder="Tell us about your property requirements..."
-                  required
-                ></textarea>
+                  required></textarea>
               </div>
 
             </div>
@@ -1602,75 +1029,89 @@ footer.footer .footer-bottom p {
           <h2>Let's find the right opportunity for you.</h2>
           <p>Start a conversation about your real estate goals today.</p>
         </div>
-
-        
+        <a href="#contactForm" class="btn btn-gold">
+          Send an Enquiry <i class="fa-solid fa-arrow-right"></i>
+        </a>
       </div>
     </section>
 
   </main>
 
   <!-- FOOTER -->
- <footer class="footer" style="background: #122d23 !important; color: #ffffff !important;"></footer>
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" aria-label="EstateAura Home">
-          <img src="logo.png" alt="EstateAura">
-        </a>
+  <footer class="site-footer">
+    <div class="container">
 
-        <p>
-          Thoughtful property choices. Personal guidance.
-          A better way to explore your next place.
-        </p>
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a href="index.html" aria-label="EstateAura Home">
+            <img src="logo.png" alt="EstateAura" class="footer-logo">
+          </a>
+          <p>
+            Thoughtful property choices. Personal guidance.
+            A better way to explore your next place.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Discover</h3>
+          <ul>
+            <li><a href="properties.html">Find a Property</a></li>
+            <li><a href="services.html">Our Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h3>Let's Connect</h3>
+
+          <div class="footer-contact-item">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:info@estateaura.com">info@estateaura.com</a>
+          </div>
+
+          <p>
+            Have a question or a property goal in mind?
+            We'd be happy to hear from you.
+          </p>
+
+          <a href="contact.html" class="btn btn-gold">
+            Get in Touch <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
       </div>
 
-      <div class="footer-column">
-        <h3>Explore</h3>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="properties.html">Properties</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> EstateAura. All rights reserved.</p>
+
+        <div class="footer-legal">
+          <a href="index.html">Home</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
       </div>
 
-      <div class="footer-column">
-        <h3>Discover</h3>
-        <a href="services.html">Our Services</a>
-        <a href="contact.html">Contact Us</a>
-      </div>
-
-      <div class="footer-column footer-contact">
-        <h3>Let's Connect</h3>
-        <p>
-          Have a question or a property goal in mind?
-          We'd be happy to hear from you.
-        </p>
-        <a href="contact.html" class="footer-button">
-          Get in Touch <span>↗</span>
-        </a>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      <p>© <span id="year"></span> EstateAura. All rights reserved.</p>
-
-      <div class="footer-bottom-links">
-        <a href="index.html">Home</a>
-        <a href="contact.html">Contact</a>
-      </div>
     </div>
   </footer>
 
   <!-- WHATSAPP FLOAT BUTTON -->
-  <!-- IMPORTANT: Replace the sample number below with your real WhatsApp number -->
   <a
     class="whatsapp-float"
     id="whatsappFloat"
     href="https://wa.me/919876543210"
     target="_blank"
     rel="noopener noreferrer"
-    aria-label="Chat with us on WhatsApp"
-  >
+    aria-label="Chat with us on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
@@ -1693,7 +1134,7 @@ footer.footer .footer-bottom p {
       menuIcon.classList.toggle("fa-xmark", isOpen);
     });
 
-    // CLOSE MOBILE MENU WHEN A LINK IS SELECTED
+    // CLOSE MOBILE MENU AFTER CLICKING A LINK
     navLinks.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         navLinks.classList.remove("open");
@@ -1706,10 +1147,9 @@ footer.footer .footer-bottom p {
     });
 
     // CURRENT YEAR
-    document.getElementById("currentYear").textContent =
-      new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    // CONTACT FORM -> WHATSAPP
+    // CONTACT FORM TO WHATSAPP
     const enquiryForm = document.getElementById("enquiryForm");
 
     enquiryForm.addEventListener("submit", function (event) {
@@ -1719,8 +1159,7 @@ footer.footer .footer-bottom p {
         return;
       }
 
-      // Replace with your actual WhatsApp number, including country code.
-      // India example: 91 + 10-digit mobile number. Do not include + or spaces.
+      // Replace this with your real WhatsApp number including country code.
       const WHATSAPP_NUMBER = "919876543210";
 
       const fullName = document.getElementById("fullName").value.trim();

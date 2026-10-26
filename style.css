@@ -3059,4 +3059,10 @@ section h2 {
     height: 46px;
   }
 }
-```
+```/* Mobile hero text: slightly shift to the right */
+@media (max-width: 768px) {
+  .hero-inner {
+    padding-left: 24px;
+    padding-right: 16px;
+  }
+}
