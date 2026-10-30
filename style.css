@@ -3066,3 +3066,17 @@ section h2 {
     padding-right: 16px;
   }
 }
+/* Mobile view: hero text slightly right shift */
+@media (max-width: 768px) {
+  .hero-inner {
+    padding-left: 18px;
+    padding-right: 12px;
+  }
+
+  .hero-kicker,
+  .hero-inner h1,
+  .hero-copy {
+    position: relative;
+    left: 8px;
+  }
+}
